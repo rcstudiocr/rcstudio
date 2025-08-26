@@ -3,156 +3,187 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RC Studio</title>
+  <title>RC Studio - Portafolio</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #f1f1f1;
       line-height: 1.6;
-      background: #ffffff;
-      color: #333;
     }
-
     header {
-      background: #0a3d62;
-      color: #fff;
-      padding: 20px 0;
+      background: linear-gradient(135deg, #001f3f, #0074D9);
+      color: white;
       text-align: center;
+      padding: 3rem 1rem;
     }
-
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
     }
-
     header p {
-      margin: 5px 0 0;
       font-size: 1.2rem;
+      opacity: 0.9;
     }
-
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      background: #111;
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #f1f1f1;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #1e90ff;
+    }
     section {
-      padding: 60px 20px;
+      padding: 3rem 1.5rem;
       max-width: 1200px;
       margin: auto;
     }
-
     section h2 {
       text-align: center;
-      font-size: 2.5rem;
-      color: #0a3d62;
-      margin-bottom: 20px;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #1e90ff;
     }
-
-    section p {
-      text-align: center;
-      font-size: 1.2rem;
-      margin-bottom: 40px;
-    }
-
-    /* Estilos Portafolio */
-    .portfolio-grid {
+    .services, .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
     }
-
-    .portfolio-item {
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
+    .card {
+      background: #111;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      text-align: center;
+      transition: transform 0.3s;
     }
-
-    .portfolio-item:hover {
+    .card:hover {
       transform: translateY(-5px);
     }
-
-    .portfolio-item img {
-      width: 100%;
-      height: auto;
-      display: block;
+    .card h3 {
+      margin-top: 1rem;
+      color: #1e90ff;
     }
-
-    .portfolio-item div {
-      padding: 20px;
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
     }
-
-    .portfolio-item h3 {
-      margin-top: 0;
-      color: #0a3d62;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 600px;
+      margin: auto;
     }
-
+    input, textarea, button {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    input, textarea {
+      background: #222;
+      color: white;
+    }
+    button {
+      background: #1e90ff;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #005bb5;
+    }
     footer {
-      background: #0a3d62;
-      color: #fff;
+      background: #111;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #888;
     }
   </style>
 </head>
 <body>
+  <!-- Hero -->
   <header>
     <h1>RC Studio</h1>
-    <p>Creatividad, Diseño y Estrategia Digital</p>
+    <p>Diseño, creatividad y proyectos digitales que destacan</p>
   </header>
 
-  <!-- Sección Sobre Mí -->
-  <section id="about">
-    <h2>Sobre Mí</h2>
-    <p>
-      Soy Roberto Castillo, apasionado por el marketing digital, el diseño y la creación de contenido
-      que conecta con las personas. En RC Studio ayudo a emprendedores y negocios a crecer en el mundo digital.
-    </p>
-  </section>
+  <!-- Menú -->
+  <nav>
+    <a href="#servicios">Servicios</a>
+    <a href="#portafolio">Portafolio</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
 
-  <!-- Sección Portafolio -->
-  <section id="portafolio">
-    <h2>🚀 Portafolio</h2>
-    <p>Algunos de mis proyectos recientes en diseño digital y marketing para emprendedores.</p>
-
-    <div class="portfolio-grid">
-      <!-- Proyecto 1 -->
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/500x300" alt="Nails by Pao">
-        <div>
-          <h3>Nails by Pao</h3>
-          <p>Diseño de página de Facebook, flyers, reels y contenido digital.</p>
-        </div>
+  <!-- Servicios -->
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Diseño Web</h3>
+        <p>Creación de sitios modernos, responsivos y atractivos.</p>
       </div>
-
-      <!-- Proyecto 2 -->
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/500x300" alt="Flyers Publicitarios">
-        <div>
-          <h3>Flyers Publicitarios</h3>
-          <p>Diseños atractivos para promociones y eventos.</p>
-        </div>
+      <div class="card">
+        <h3>Branding</h3>
+        <p>Identidad visual y logotipos que transmiten tu esencia.</p>
       </div>
-
-      <!-- Proyecto 3 -->
-      <div class="portfolio-item">
-        <img src="https://via.placeholder.com/500x300" alt="Reels y Animaciones">
-        <div>
-          <h3>Reels y Animaciones</h3>
-          <p>Creación de contenido audiovisual para redes sociales.</p>
-        </div>
+      <div class="card">
+        <h3>Marketing Digital</h3>
+        <p>Estrategias para que tu marca tenga mayor alcance.</p>
       </div>
     </div>
   </section>
 
-  <!-- Sección Contacto -->
-  <section id="contact">
-    <h2>📩 Contacto</h2>
-    <p>
-      ¿Quieres llevar tu proyecto al siguiente nivel? <br>
-      Escríbeme a <strong>rcstudiocr@gmail.com</strong> o en redes sociales.
-    </p>
+  <!-- Portafolio -->
+  <section id="portafolio">
+    <h2>Portafolio</h2>
+    <div class="portfolio-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250" alt="Proyecto 1">
+        <h3>Proyecto 1</h3>
+        <p>Descripción breve del proyecto.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250" alt="Proyecto 2">
+        <h3>Proyecto 2</h3>
+        <p>Descripción breve del proyecto.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250" alt="Proyecto 3">
+        <h3>Proyecto 3</h3>
+        <p>Descripción breve del proyecto.</p>
+      </div>
+    </div>
   </section>
 
+  <!-- Contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea rows="5" placeholder="Tu mensaje"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 RC Studio | Diseñado con pasión 💡</p>
+    <p>© 2025 RC Studio. Todos los derechos reservados.</p>
   </footer>
 </body>
 </html>

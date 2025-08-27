@@ -5,88 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RC Studio | Diseño Visual & Branding Digital</title>
 
-  <!-- SEO -->
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- SEO & Redes Sociales -->
   <meta name="description" content="RC Studio | Diseño Visual & Branding Digital. Transformamos tu marca en experiencias visuales memorables con estrategia, creatividad y gestión digital.">
   <meta property="og:title" content="RC Studio | Diseño Visual & Branding Digital">
   <meta property="og:description" content="Transformamos tu marca en experiencias visuales memorables con estrategia, creatividad y gestión digital.">
-  <meta property="og:image" content="https://rcstudiocr.github.io/rcstudio/img/logo-rcstudio.png">
+  <meta property="og:image" content="https://rcstudiocr.github.io/rcstudio/logo-rcstudio.png">
   <meta property="og:url" content="https://rcstudiocr.github.io/rcstudio/">
   <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/style.css"> <!-- tu CSS opcional -->
+  <!-- FontAwesome para íconos -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-poppins">
+<body class="bg-gray-50 text-gray-800">
 
   <!-- NAVBAR -->
   <header class="bg-black text-white shadow-md">
     <div class="container mx-auto flex items-center justify-between p-4">
+
+      <!-- Logo -->
       <a href="https://rcstudiocr.github.io/rcstudio/">
         <img src="imgs/Logo.png" alt="RC Studio Logo" class="h-12">
       </a>
+
+      <!-- Menú de navegación -->
       <nav class="space-x-6 text-lg">
         <a href="#servicios" class="hover:text-blue-400">Servicios</a>
         <a href="#portafolio" class="hover:text-blue-400">Portafolio</a>
         <a href="#nosotros" class="hover:text-blue-400">Nosotros</a>
         <a href="#contacto" class="hover:text-blue-400">Contacto</a>
       </nav>
+
+      <!-- Redes Sociales -->
+      <div class="flex space-x-4 text-2xl">
+        <a href="https://wa.me/50670853001" target="_blank" class="hover:text-green-400">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61578892313097" target="_blank" class="hover:text-blue-600">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/rcstudiopublicidad/" target="_blank" class="hover:text-pink-500">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="text-center py-20 bg-gradient-to-r from-black to-blue-800 text-white">
-    <h1 class="text-5xl font-bold mb-4">RC Studio</h1>
-    <p class="text-xl">Diseño Visual & Branding Digital para marcas que quieren destacar</p>
-    <a href="#contacto" class="mt-6 inline-block bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition">Contáctanos</a>
+  <!-- CONTENIDO DEMO -->
+  <section id="servicios" class="container mx-auto py-12">
+    <h1 class="text-3xl font-bold mb-4">Servicios</h1>
+    <p>Aquí irá la descripción de tus servicios.</p>
   </section>
 
-  <!-- SERVICIOS -->
-  <section id="servicios" class="py-16 container mx-auto px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">Nuestros Servicios</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="p-6 bg-white shadow-lg rounded-xl">
-        <h3 class="text-xl font-semibold mb-3">Branding</h3>
-        <p>Diseñamos identidades visuales memorables que reflejan la esencia de tu marca.</p>
-      </div>
-      <div class="p-6 bg-white shadow-lg rounded-xl">
-        <h3 class="text-xl font-semibold mb-3">Diseño Web</h3>
-        <p>Páginas modernas, rápidas y optimizadas para una experiencia única.</p>
-      </div>
-      <div class="p-6 bg-white shadow-lg rounded-xl">
-        <h3 class="text-xl font-semibold mb-3">Marketing Digital</h3>
-        <p>Estrategias digitales creativas que hacen crecer tu negocio.</p>
-      </div>
-    </div>
+  <section id="portafolio" class="container mx-auto py-12">
+    <h1 class="text-3xl font-bold mb-4">Portafolio</h1>
+    <p>Aquí irá tu portafolio de proyectos.</p>
   </section>
 
-  <!-- PORTAFOLIO -->
-  <section id="portafolio" class="bg-gray-100 py-16">
-    <h2 class="text-3xl font-bold text-center mb-10">Portafolio</h2>
-    <div class="grid md:grid-cols-3 gap-8 container mx-auto px-6">
-      <img src="imgs/flyer.png" alt="Proyecto 1" class="rounded-xl shadow-lg">
-      <img src="img/portafolio2.jpg" alt="Proyecto 2" class="rounded-xl shadow-lg">
-      <img src="img/portafolio3.jpg" alt="Proyecto 3" class="rounded-xl shadow-lg">
-    </div>
+  <section id="nosotros" class="container mx-auto py-12">
+    <h1 class="text-3xl font-bold mb-4">Nosotros</h1>
+    <p>Aquí va la historia y visión de RC Studio.</p>
   </section>
 
-  <!-- NOSOTROS -->
-  <section id="nosotros" class="py-16 container mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6">Sobre Nosotros</h2>
-    <p class="max-w-2xl mx-auto text-lg">En RC Studio creemos que cada marca tiene una historia única. Nuestro trabajo es transformarla en experiencias visuales que conecten con tu audiencia.</p>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto" class="bg-black text-white py-16 text-center">
-    <h2 class="text-3xl font-bold mb-6">Contáctanos</h2>
-    <p class="mb-4">Escríbenos y llevemos tu marca al siguiente nivel 🚀</p>
-    <a href="mailto:rcstudiopublicidad@gmail.com" class="bg-blue-500 px-6 py-3 rounded-full font-semibold hover:bg-blue-700 transition">Escríbenos</a>
+  <section id="contacto" class="container mx-auto py-12">
+    <h1 class="text-3xl font-bold mb-4">Contacto</h1>
+    <p>Puedes ponerte en contacto con nosotros por WhatsApp o redes sociales.</p>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
-    <p>&copy; 2025 RC Studio. Todos los derechos reservados.</p>
+  <footer class="bg-black text-white py-6 mt-12">
+    <div class="container mx-auto text-center">
+      <p>© 2025 RC Studio. Todos los derechos reservados.</p>
+    </div>
   </footer>
 
 </body>

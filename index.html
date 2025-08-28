@@ -1,92 +1,605 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RC Studio | Diseño Visual & Branding Digital</title>
-
-  <!-- TailwindCSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- SEO & Redes Sociales -->
-  <meta name="description" content="RC Studio | Diseño Visual & Branding Digital. Transformamos tu marca en experiencias visuales memorables con estrategia, creatividad y gestión digital.">
-  <meta property="og:title" content="RC Studio | Diseño Visual & Branding Digital">
-  <meta property="og:description" content="Transformamos tu marca en experiencias visuales memorables con estrategia, creatividad y gestión digital.">
-  <meta property="og:image" content="https://rcstudiocr.github.io/rcstudio/logo-rcstudio.png">
-  <meta property="og:url" content="https://rcstudiocr.github.io/rcstudio/">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <!-- FontAwesome para íconos -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-  <style>
-    body { font-family: 'Poppins', sans-serif; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Studio | Diseño Visual & Branding Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+            scroll-behavior: smooth;
+        }
+        .bg-metal-blue {
+            background-color: #1a3a5f;
+        }
+        .text-metal-blue {
+            color: #4a8fd4;
+        }
+        .border-metal-blue {
+            border-color: #4a8fd4;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #4a8fd4, #3a7bc8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .portfolio-item {
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+        }
+        .testimonial-card {
+            background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #4a8fd4;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-  <!-- NAVBAR -->
-  <header class="bg-black text-white shadow-md">
-    <div class="container mx-auto flex items-center justify-between p-4">
+    <!-- Header -->
+<header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
+  <div class="container mx-auto px-6 py-4">
+    <div class="flex justify-between items-center">
 
-      <!-- Logo -->
-      <a href="https://rcstudiocr.github.io/rcstudio/">
-        <img src="imgs/Logo.png" alt="RC Studio Logo" class="h-12">
-      </a>
-
-      <!-- Menú de navegación -->
-      <nav class="space-x-6 text-lg">
-        <a href="#servicios" class="hover:text-blue-400">Servicios</a>
-        <a href="#portafolio" class="hover:text-blue-400">Portafolio</a>
-        <a href="#nosotros" class="hover:text-blue-400">Nosotros</a>
-        <a href="#contacto" class="hover:text-blue-400">Contacto</a>
-      </nav>
-
-      <!-- Redes Sociales -->
-      <div class="flex space-x-4 text-2xl">
-        <a href="https://wa.me/50670853001" target="_blank" class="hover:text-green-400">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61578892313097" target="_blank" class="hover:text-blue-600">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/rcstudiopublicidad/" target="_blank" class="hover:text-pink-500">
-          <i class="fab fa-instagram"></i>
-        </a>
+      <!-- Logo + Marca -->
+      <div class="flex items-center">
+        <!-- Asegúrate que este archivo esté en tu misma carpeta o ruta válida -->
+        <img src="Logo.png" alt="RC Studio Logo" class="h-12 w-auto mr-3">
+        <span class="text-white font-bold text-xl hidden md:block">
+          RC <span class="text-blue-500">Studio</span>
+        </span>
       </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
     </div>
-  </header>
+  </div>
+</header>
 
-  <!-- CONTENIDO DEMO -->
-  <section id="servicios" class="container mx-auto py-12">
-    <h1 class="text-3xl font-bold mb-4">Servicios</h1>
-    <p>Aquí irá la descripción de tus servicios.</p>
-  </section>
 
-  <section id="portafolio" class="container mx-auto py-12">
-    <h1 class="text-3xl font-bold mb-4">Portafolio</h1>
-    <p>Aquí irá tu portafolio de proyectos.</p>
-  </section>
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-image min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Tu presencia digital <span class="gradient-text">comienza con estilo</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-10">
+                    Transformamos tu marca en una experiencia visual memorable. Estrategia, diseño y gestión para destacar en el mundo digital.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="(506) 70853001" class="bg-metal-blue hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                        Contáctanos
+                    </a>
+                    <a href="#servicios" class="border border-metal-blue text-metal-blue hover:bg-metal-blue hover:text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+                        Nuestros servicios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="nosotros" class="container mx-auto py-12">
-    <h1 class="text-3xl font-bold mb-4">Nosotros</h1>
-    <p>Aquí va la historia y visión de RC Studio.</p>
-  </section>
+    <!-- About Section -->
+    <section id="sobre-nosotros" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Sobre <span class="gradient-text">RC Studio</span>
+                    </h2>
+                    <p class="text-gray-300 mb-6">
+                        RC Studio nace de la pasión por el diseño visual y la comunicación estratégica en redes sociales. Somos una agencia especializada en crear identidades digitales impactantes que conectan con tu audiencia.
+                    </p>
+                    <p class="text-gray-300 mb-6">
+                        Fundada por un community manager con experiencia en la gestión de marcas como <span class="text-metal-blue font-medium">Nails by Pao</span>, combinamos conocimiento técnico con creatividad para ofrecer soluciones visuales que generan engagement y crecimiento.
+                    </p>
+                    <p class="text-gray-300">
+                        Nuestro enfoque se basa en entender profundamente cada marca para desarrollar contenido que no solo se vea bien, sino que también comunique efectivamente y genere resultados.
+                    </p>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="relative">
+                        <div class="w-full h-80 md:h-96 bg-gray-800 rounded-xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Equipo de RC Studio" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-5 -right-5 bg-metal-blue text-white py-3 px-6 rounded-lg shadow-lg">
+                            <span class="font-bold">+3 años</span> de experiencia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section id="contacto" class="container mx-auto py-12">
-    <h1 class="text-3xl font-bold mb-4">Contacto</h1>
-    <p>Puedes ponerte en contacto con nosotros por WhatsApp o redes sociales.</p>
-  </section>
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Nuestros <span class="gradient-text">Servicios</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Soluciones integrales para potenciar tu presencia digital. Desde diseño hasta estrategia, cubrimos todas tus necesidades.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-metal-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Diseño de Publicaciones</h3>
+                    <p class="text-gray-300">
+                        Creación de gráficos atractivos para redes sociales que captan la atención y comunican tu mensaje de manera efectiva.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-metal-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-images text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Carruseles y Stories</h3>
+                    <p class="text-gray-300">
+                        Diseño de secuencias visuales que cuentan historias y mantienen a tu audiencia comprometida con tu contenido.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-metal-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-film text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Reels y Contenido Video</h3>
+                    <p class="text-gray-300">
+                        Producción de contenido en video corto optimizado para algoritmos y diseñado para maximizar el alcance orgánico.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-metal-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-search text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Auditoría de Perfiles</h3>
+                    <p class="text-gray-300">
+                        Análisis profesional de tu presencia digital con recomendaciones estratégicas para mejorar tu rendimiento.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-metal-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chess-queen text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Identidad de Marca</h3>
+                    <p class="text-gray-300">
+                        Desarrollo de sistemas visuales completos que definen la personalidad única de tu marca en todos los puntos de contacto.
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-gray-800 rounded-xl p-8 hover:bg-gray-700 transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-metal-blue rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Gestión de Redes</h3>
+                    <p class="text-gray-300">
+                        Administración profesional de tus perfiles sociales con estrategias de contenido y crecimiento adaptadas a tus objetivos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-black text-white py-6 mt-12">
-    <div class="container mx-auto text-center">
-      <p>© 2025 RC Studio. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+    <!-- Portfolio Section -->
+    <section id="portafolio" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Nuestro <span class="gradient-text">Portafolio</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Una muestra de nuestro trabajo creativo para diversas marcas y sectores.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="portfolio-item">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden h-80">
+                        <img src="imgs/flyer.png" alt="Diseño de publicaciones" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Campaña Nails by Pao</h3>
+                                <p class="text-gray-300">Diseño de publicaciones y estrategia de contenido</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="portfolio-item">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1611162616475-46592b32151b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Carrusel Instagram" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Carrusel Educativo</h3>
+                                <p class="text-gray-300">Secuencia visual para marca de bienestar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="portfolio-item">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fad0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Identidad de marca" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Branding Digital</h3>
+                                <p class="text-gray-300">Sistema visual completo para emprendimiento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="portfolio-item">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Reel Instagram" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Contenido en Video</h3>
+                                <p class="text-gray-300">Producción de Reels para marca de moda</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="portfolio-item">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1611162617263-4ec306b1f0d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Stories interactivos" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Stories Interactivos</h3>
+                                <p class="text-gray-300">Diseño de secuencias para engagement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="portfolio-item">
+                    <div class="bg-gray-800 rounded-xl overflow-hidden h-80">
+                        <img src="https://images.unsplash.com/photo-1611162617260-8c0f1d7e6b0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Packaging design" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white font-bold text-xl mb-2">Diseño de Packaging</h3>
+                                <p class="text-gray-300">Identidad visual para producto físico</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Lo que dicen <span class="gradient-text">nuestros clientes</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    La satisfacción de nuestros clientes es nuestra mayor recompensa.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-metal-blue flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">P</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Paola Castillo</h4>
+                            <p class="text-metal-blue text-sm">Nails by Pao</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "RC Studio transformó completamente mi presencia en Instagram. En solo 3 meses duplicamos nuestros seguidores y las ventas aumentaron un 40%. Su atención al detalle y comprensión de mi marca es increíble."
+                    </p>
+                    <div class="mt-4 flex">
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-metal-blue flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">M</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Marco Rodríguez</h4>
+                            <p class="text-metal-blue text-sm">CEO, FitLife</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Contratamos a RC Studio para nuestro relanzamiento de marca y los resultados superaron todas nuestras expectativas. Su equipo logró captar perfectamente la esencia de nuestro negocio y plasmarla en un sistema visual coherente y atractivo."
+                    </p>
+                    <div class="mt-4 flex">
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card rounded-xl p-8">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-full bg-metal-blue flex items-center justify-center mr-4">
+                            <span class="text-white font-bold">A</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Ana López</h4>
+                            <p class="text-metal-blue text-sm">Emprendedora</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 italic">
+                        "Como emprendedora, necesitaba ayuda para destacar en redes sociales. RC Studio no solo creó contenido hermoso, sino que me enseñó a entender mejor a mi audiencia. Ahora tengo una estrategia clara y un feed que realmente representa mi marca."
+                    </p>
+                    <div class="mt-4 flex">
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400 mr-1"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        <span class="gradient-text">Contáctanos</span>
+                    </h2>
+                    <p class="text-gray-400 max-w-2xl mx-auto">
+                        Estamos listos para llevar tu marca al siguiente nivel. ¡Hablemos!
+                    </p>
+                </div>
+                
+                <div class="bg-gray-900 rounded-xl p-8 md:p-10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-6">Envía un mensaje</h3>
+                            <form id="contact-form" class="space-y-6">
+                                <div>
+                                    <label for="name" class="block text-gray-300 mb-2">Nombre</label>
+                                    <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-metal-blue">
+                                </div>
+                                <div>
+                                    <label for="whatsapp" class="block text-gray-300 mb-2">WhatsApp</label>
+                                    <input type="tel" id="whatsapp" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-metal-blue">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-gray-300 mb-2">Mensaje</label>
+                                    <textarea id="message" rows="4" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-metal-blue"></textarea>
+                                </div>
+                                <button type="submit" class="w-full bg-metal-blue hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300">
+                                    Enviar mensaje
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-bold mb-6">Otras formas de contacto</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-metal-blue rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fab fa-whatsapp text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">WhatsApp Directo</h4>
+                                        <p class="text-gray-300 mb-2">Habla con nosotros al instante</p>
+                                        <a href="https://wa.cr/50670853001" class="text-metal-blue hover:underline">Enviar mensaje</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-metal-blue rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-envelope text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Correo Electrónico</h4>
+                                        <p class="text-gray-300 mb-2">Escríbenos a nuestro email</p>
+                                        <a href="mailto:rcstudiopublicidad@gmail.com" class="text-metal-blue hover:underline">rcstudiopublicidad@gmail.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="w-12 h-12 bg-metal-blue rounded-lg flex items-center justify-center mr-4">
+                                        <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Ubicación</h4>
+                                        <p class="text-gray-300">San José, Costa Rica</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="pt-4">
+                                    <h4 class="font-bold mb-4">Síguenos en redes</h4>
+                                    <div class="flex space-x-4">
+                                        <a href="https://www.instagram.com/rcstudiopublicidad/" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-metal-blue rounded-full flex items-center justify-center transition duration-300">
+                                            <i class="fab fa-instagram text-white"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/profile.php?id=61578892313097" target="_blank" class="w-10 h-10 bg-gray-800 hover:bg-metal-blue rounded-full flex items-center justify-center transition duration-300">
+                                            <i class="fab fa-facebook-f text-white"></i>
+                                        </a>
+                                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-metal-blue rounded-full flex items-center justify-center transition duration-300">
+                                            <i class="fab fa-linkedin-in text-white"></i>
+                                        </a>
+                                        <a href="#" class="w-10 h-10 bg-gray-800 hover:bg-metal-blue rounded-full flex items-center justify-center transition duration-300">
+                                            <i class="fab fa-behance text-white"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <img src="/logo-rcstudio.png" alt="RC Studio Logo" class="h-10 mr-3">
+                    <span class="text-white font-bold text-xl hidden md:block">RC <span class="gradient-text">Studio</span></span>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <p class="text-gray-400 mb-4 text-center md:text-right">
+                        Transformando marcas a través del diseño estratégico.
+                    </p>
+                    <p class="text-gray-500 text-sm">
+                        © 2023 RC Studio. Todos los derechos reservados.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-metal-blue text-white rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send this data to a server
+            console.log('Form submitted:', { name, whatsapp, message });
+            
+            // Show success message
+            alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>

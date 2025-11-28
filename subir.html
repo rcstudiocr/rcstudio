@@ -1,31 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Subir archivos - RC Studio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body { background:#111; color:#fff; padding:20px; font-family:Arial; }
-form { background:#222; padding:20px; border-radius:10px; max-width:600px; margin:auto; }
-input { width:100%; padding:12px; margin-top:10px; border:none; border-radius:6px; }
-button {
-    background:#e91e63; color:white; padding:12px;
-    border:none; border-radius:6px; margin-top:15px;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subir archivos - RC Studio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 
-<body>
+<body class="bg-black text-white">
 
-<h1>Subir Archivos</h1>
+  <!-- HEADER -->
+  <!-- (Si ya lo pegaste en otras páginas, usá el mismo header aquí también) -->
+  <!-- O puedes poner un include después, pero por ahora pegalo igual -->
 
-<form action="https://formspree.io/f/TU-ENDPOINT" method="POST" enctype="multipart/form-data">
-<label>Nombre:</label>
-<input type="text" name="name" required>
-<label>Subir archivos:</label>
-<input type="file" name="files" multiple>
-<button>Enviar</button>
-</form>
+  <header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="imgs/Logo.png" alt="RC Studio Logo" class="h-12 w-auto mr-3">
+        <span class="text-white font-bold text-xl hidden md:block">
+          RC <span class="text-blue-500">Studio</span>
+        </span>
+      </div>
+
+      <nav class="hidden md:flex space-x-6 text-white">
+        <a href="index.html" class="hover:text-blue-400">Inicio</a>
+        <a href="servicios.html" class="hover:text-blue-400">Servicios</a>
+        <a href="contratar.html" class="hover:text-blue-400">Contratar</a>
+        <a href="subir.html" class="hover:text-blue-400">Subir archivos</a>
+      </nav>
+
+      <div class="md:hidden">
+        <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <nav id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-95 px-6 py-4 space-y-4">
+    <a href="index.html" class="block text-white hover:text-blue-400">Inicio</a>
+    <a href="servicios.html" class="block text-white hover:text-blue-400">Servicios</a>
+    <a href="contratar.html" class="block text-white hover:text-blue-400">Contratar</a>
+    <a href="subir.html" class="block text-white hover:text-blue-400">Subir archivos</a>
+  </nav>
+
+  <script>
+    document.getElementById("menu-toggle")
+      .addEventListener("click", () => {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+      });
+  </script>
+
+  <!-- MAIN CONTENT -->
+  <section class="pt-32 pb-20 px-6 max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-blue-400 mb-6">Subir archivos</h1>
+    <p class="mb-8 text-gray-300">
+      Aquí podés enviar los archivos necesarios para tu proyecto. Tu información será recibida de forma segura.
+    </p>
+
+    <!-- FORMULARIO GOOGLE FORMS -->
+    <div class="bg-gray-900 p-4 rounded-lg shadow-lg">
+      <!-- PEGÁ AQUÍ EL CÓDIGO DEL IFRAME DE GOOGLE FORMS -->
+      <!-- EJEMPLO: -->
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeIby3z2PLMdVdLpx-kCkVoPLKVVXib8lqvTYRZdkq8e5erwA/viewform?embedded=true" width="640" height="1172" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe> 
+    </div>
+
+  </section>
 
 </body>
 </html>

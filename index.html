@@ -67,18 +67,26 @@
 <body>
 
     <!-- Header -->
+<!-- Header -->
 <header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
   <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
 
       <!-- Logo + Marca -->
       <div class="flex items-center">
-        <!-- Asegúrate que este archivo esté en tu misma carpeta o ruta válida -->
         <img src="imgs/Logo.png" alt="RC Studio Logo" class="h-12 w-auto mr-3">
         <span class="text-white font-bold text-xl hidden md:block">
           RC <span class="text-blue-500">Studio</span>
         </span>
       </div>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-6 text-white">
+        <a href="index.html" class="hover:text-blue-400">Inicio</a>
+        <a href="servicios.html" class="hover:text-blue-400">Servicios</a>
+        <a href="contratar.html" class="hover:text-blue-400">Contratar</a>
+        <a href="subir.html" class="hover:text-blue-400">Subir archivos</a>
+      </nav>
 
       <!-- Mobile menu button -->
       <div class="md:hidden">
@@ -93,6 +101,24 @@
     </div>
   </div>
 </header>
+
+<!-- Mobile Menu -->
+<nav id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-95 px-6 py-4 space-y-4">
+  <a href="index.html" class="block text-white hover:text-blue-400">Inicio</a>
+  <a href="servicios.html" class="block text-white hover:text-blue-400">Servicios</a>
+  <a href="contratar.html" class="block text-white hover:text-blue-400">Contratar</a>
+  <a href="subir.html" class="block text-white hover:text-blue-400">Subir archivos</a>
+</nav>
+
+<!-- Mobile Menu Script -->
+<script>
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("mobile-menu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
 
 
     <!-- Hero Section -->
@@ -603,4 +629,5 @@
     </script>
 </body>
 </html>
+
 

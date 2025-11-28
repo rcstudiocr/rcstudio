@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Subir archivos - RC Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body { background:#111; color:#fff; padding:20px; font-family:Arial; }
+form { background:#222; padding:20px; border-radius:10px; max-width:600px; margin:auto; }
+input { width:100%; padding:12px; margin-top:10px; border:none; border-radius:6px; }
+button {
+    background:#e91e63; color:white; padding:12px;
+    border:none; border-radius:6px; margin-top:15px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Subir Archivos</h1>
+
+<form action="https://formspree.io/f/TU-ENDPOINT" method="POST" enctype="multipart/form-data">
+<label>Nombre:</label>
+<input type="text" name="name" required>
+<label>Subir archivos:</label>
+<input type="file" name="files" multiple>
+<button>Enviar</button>
+</form>
+
+</body>
+</html>

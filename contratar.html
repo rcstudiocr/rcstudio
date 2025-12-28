@@ -1,78 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Contratar Servicios - RC Studio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-body {
-    background: #111;
-    color: #fff;
-    font-family: Arial;
-    padding: 20px;
-}
-form {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: auto;
-}
-input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 6px;
-    border: none;
-}
-button {
-    background: #e91e63;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-button:hover {
-    background: #ff2f7f;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contratar Servicios | RC Studio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-black text-white font-sans">
 
-<h1>Contratar Servicios – RC Studio</h1>
+    <!-- Contenedor principal -->
+    <div class="max-w-3xl mx-auto px-6 py-12">
 
-<form action="https://formspree.io/f/xangpnog" method="POST" enctype="multipart/form-data">
+        <!-- Título -->
+        <h1 class="text-4xl font-bold text-center mb-10 text-white">
+            Contratar Servicios – RC Studio
+        </h1>
 
-<label>Nombre completo:</label>
-<input type="text" name="name" required>
+        <!-- Tarjeta -->
+        <div class="bg-neutral-900 p-8 rounded-2xl shadow-lg border border-neutral-800">
 
-<label>Correo electrónico:</label>
-<input type="email" name="email" required>
+            <form onsubmit="return enviarWhatsapp(event)" class="space-y-8">
 
-<label>Tipo de servicio:</label>
-<select name="service">
-  <option value="Basico">Paquete Básico</option>
-  <option value="Intermedio">Paquete Intermedio</option>
-  <option value="Premium">Paquete Premium</option>
-  <option value="Otro">Otro</option>
-</select>
+                <!-- Nombre -->
+                <div>
+                    <label class="block mb-2 font-semibold">Nombre completo</label>
+                    <input
+                        type="text" id="nombre"
+                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-pink-600"
+                        required>
+                </div>
 
-<label>Descripción del proyecto:</label>
-<textarea name="message" rows="5" placeholder="Contame qué ocupás"></textarea>
+                <!-- Correo -->
+                <div>
+                    <label class="block mb-2 font-semibold">Correo electrónico</label>
+                    <input
+                        type="email" id="correo"
+                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-pink-600"
+                        required>
+                </div>
 
-<label>Subir archivos (logo, fotos, etc):</label>
-<input type="file" name="files" multiple>
+                <!-- Tipo de servicio -->
+                <div>
+                    <label class="block mb-2 font-semibold">Tipo de servicio</label>
+                    <select id="servicio"
+                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-pink-600"
+                        required>
+                        <option value="">Seleccione una opción</option>
+                        <option>Paquete Básico</option>
+                        <option>Paquete Intermedio</option>
+                        <option>Paquete Premium</option>
+                        <option>Otro</option>
+                    </select>
+                </div>
 
-<label>Comprobante de pago :</label>
-<input type="file" name="pago" accept="image/*,application/pdf">
+                <!-- Descripción -->
+                <div>
+                    <label class="block mb-2 font-semibold">Descripción del proyecto</label>
+                    <textarea id="descripcion"
+                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 h-32 focus:ring-2 focus:ring-pink-600"
+                        placeholder="Contame qué ocupás"
+                        required></textarea>
+                </div>
 
-<button type="submit">Enviar Solicitud</button>
+                <!-- Archivos -->
+                <div>
+                    <label class="block mb-2 font-semibold">Subir archivos (logo, fotos, etc)</label>
+                    <input type="file" id="archivos" multiple
+                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700">
+                </div>
 
-</form>
+                <!-- Comprobante -->
+                <div>
+                    <label class="block mb-2 font-semibold">Comprobante de pago</label>
+                    <input type="file" id="pago" accept="image/*,application/pdf"
+                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700">
+                </div>
+
+                <!-- Botón -->
+                <button type="submit"
+                    class="w-full bg-pink-600 hover:bg-pink-700 py-3 rounded-xl font-semibold text-white transition">
+                    Enviar a WhatsApp
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+
+<script>
+function enviarWhatsapp(event) {
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const correo = document.getElementById("correo").value;
+    const servicio = document.getElementById("servicio").value;
+    const descripcion = document.getElementById("descripcion").value;
+
+    const texto = 
+`Solicitud de servicios desde RC Studio:
+
+*Nombre:* ${nombre}
+*Correo:* ${correo}
+*Servicio requerido:* ${servicio}
+*Descripción:* ${descripcion}
+
+*Adjuntos:* (Debés enviarlos manualmente después de este mensaje porque WhatsApp no permite enviar archivos desde formularios web).`;
+
+    const url = `https://wa.me/50670853001?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>

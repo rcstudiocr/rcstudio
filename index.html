@@ -224,169 +224,125 @@
     </section>
 
     <!-- Services Section -->
-<section id="servicios" class="py-24 bg-gray-900 relative overflow-hidden">
+<section id="servicios" class="py-24 bg-gradient-to-b from-gray-900 via-black to-gray-900 relative overflow-hidden">
+  
+  <!-- Glow decorativo -->
+  <div class="absolute -top-32 -left-32 w-96 h-96 bg-metal-blue opacity-20 blur-3xl rounded-full"></div>
+  <div class="absolute bottom-0 -right-32 w-96 h-96 bg-pink-600 opacity-10 blur-3xl rounded-full"></div>
 
-    <!-- Glow decorativo -->
-    <div class="absolute -top-40 -left-40 w-96 h-96 bg-metal-blue/10 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-0 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+  <div class="container mx-auto px-6 relative z-10">
 
-    <div class="container mx-auto px-6 relative z-10">
-
-        <!-- Header -->
-        <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">
-                Nuestros <span class="gradient-text">Servicios</span>
-            </h2>
-            <p class="text-gray-400 max-w-2xl mx-auto text-lg">
-                Servicios pensados para marcas que quieren verse profesionales,
-                atraer clientes reales y dejar de improvisar su presencia digital.
-            </p>
-        </div>
-
-        <!-- Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10
-                    [&>div]:opacity-0 [&>div]:translate-y-8
-                    [&>div]:animate-[fadeUp_0.7s_ease-out_forwards]">
-
-            <!-- Servicio 1 -->
-            <div class="group bg-gray-800/90 backdrop-blur rounded-2xl p-8
-                        transition-all duration-300
-                        hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/40">
-
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6
-                            bg-metal-blue/20 group-hover:bg-metal-blue/40
-                            transition-all duration-300 group-hover:scale-110">
-                    <i class="fas fa-palette text-metal-blue text-2xl group-hover:rotate-6 transition"></i>
-                </div>
-
-                <h3 class="text-xl font-bold mb-1">Diseño de Publicaciones</h3>
-                <p class="text-sm text-metal-blue mb-4 opacity-80">
-                    Coherencia visual, no improvisación
-                </p>
-
-                <p class="text-gray-300 leading-relaxed">
-                    Gráficos diseñados para captar atención, comunicar con claridad
-                    y reforzar la identidad de tu marca en redes sociales.
-                </p>
-            </div>
-
-            <!-- Servicio 2 -->
-            <div class="group bg-gray-800/90 backdrop-blur rounded-2xl p-8
-                        transition-all duration-300
-                        hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/40">
-
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6
-                            bg-metal-blue/20 group-hover:bg-metal-blue/40
-                            transition-all duration-300 group-hover:scale-110">
-                    <i class="fas fa-images text-metal-blue text-2xl group-hover:-rotate-6 transition"></i>
-                </div>
-
-                <h3 class="text-xl font-bold mb-1">Carruseles y Stories</h3>
-                <p class="text-sm text-metal-blue mb-4 opacity-80">
-                    Contenido que se consume
-                </p>
-
-                <p class="text-gray-300 leading-relaxed">
-                    Secuencias visuales pensadas para retener,
-                    educar y guiar a tu audiencia sin saturarla.
-                </p>
-            </div>
-
-            <!-- Servicio 3 -->
-            <div class="group bg-gray-800/90 backdrop-blur rounded-2xl p-8
-                        transition-all duration-300
-                        hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/40">
-
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6
-                            bg-metal-blue/20 group-hover:bg-metal-blue/40
-                            transition-all duration-300 group-hover:scale-110">
-                    <i class="fas fa-film text-metal-blue text-2xl group-hover:scale-110 transition"></i>
-                </div>
-
-                <h3 class="text-xl font-bold mb-1">Reels y Contenido en Video</h3>
-                <p class="text-sm text-metal-blue mb-4 opacity-80">
-                    Atención en los primeros segundos
-                </p>
-
-                <p class="text-gray-300 leading-relaxed">
-                    Videos cortos optimizados para algoritmos,
-                    pensados para generar alcance y recordación.
-                </p>
-            </div>
-
-            <!-- Servicio 4 -->
-            <div class="group bg-gray-800/90 backdrop-blur rounded-2xl p-8
-                        transition-all duration-300
-                        hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/40">
-
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6
-                            bg-metal-blue/20 group-hover:bg-metal-blue/40
-                            transition-all duration-300 group-hover:scale-110">
-                    <i class="fas fa-search text-metal-blue text-2xl transition"></i>
-                </div>
-
-                <h3 class="text-xl font-bold mb-1">Auditoría de Perfiles</h3>
-                <p class="text-sm text-metal-blue mb-4 opacity-80">
-                    Detectamos lo que no estás viendo
-                </p>
-
-                <p class="text-gray-300 leading-relaxed">
-                    Evaluación estratégica de tu perfil para identificar errores,
-                    oportunidades y acciones claras de mejora.
-                </p>
-            </div>
-
-            <!-- Servicio 5 -->
-            <div class="group bg-gray-800/90 backdrop-blur rounded-2xl p-8
-                        transition-all duration-300
-                        hover:-translate-y-3 hover:shadow-2xl hover:shadow-black/40">
-
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6
-                            bg-metal-blue/20 group-hover:bg-metal-blue/40
-                            transition-all duration-300 group-hover:scale-110">
-                    <i class="fas fa-chess-queen text-metal-blue text-2xl transition"></i>
-                </div>
-
-                <h3 class="text-xl font-bold mb-1">Identidad de Marca</h3>
-                <p class="text-sm text-metal-blue mb-4 opacity-80">
-                    La base de todo
-                </p>
-
-                <p class="text-gray-300 leading-relaxed">
-                    Sistemas visuales sólidos que definen
-                    cómo se ve, se siente y se recuerda tu marca.
-                </p>
-            </div>
-
-            <!-- Servicio 6 DESTACADO -->
-            <div class="group bg-gray-800/95 backdrop-blur rounded-2xl p-8
-                        border border-metal-blue/40
-                        transition-all duration-300
-                        hover:-translate-y-3 hover:shadow-2xl hover:shadow-metal-blue/20">
-
-                <span class="inline-block text-xs uppercase tracking-widest text-metal-blue mb-3">
-                    Más solicitado
-                </span>
-
-                <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6
-                            bg-metal-blue/30 group-hover:bg-metal-blue/50
-                            transition-all duration-300 group-hover:scale-110">
-                    <i class="fas fa-chart-line text-metal-blue text-2xl transition"></i>
-                </div>
-
-                <h3 class="text-xl font-bold mb-1">Gestión de Redes</h3>
-                <p class="text-sm text-metal-blue mb-4 opacity-80">
-                    Constancia sin desgaste
-                </p>
-
-                <p class="text-gray-300 leading-relaxed">
-                    Administración estratégica de redes sociales
-                    enfocada en crecimiento real y presencia profesional.
-                </p>
-            </div>
-
-        </div>
+    <!-- Header -->
+    <div class="text-center mb-20">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+        Nuestros <span class="gradient-text">Servicios</span>
+      </h2>
+      <p class="text-gray-400 max-w-2xl mx-auto text-lg">
+        Diseño, contenido y estrategia pensados para crecer marcas reales.
+        Elegí servicios sueltos o combinados en paquetes mensuales.
+      </p>
     </div>
+
+    <!-- Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+      <!-- Card -->
+      <div class="group bg-gray-800/80 backdrop-blur rounded-2xl p-8 border border-gray-700 
+                  hover:border-metal-blue transition duration-300 transform hover:-translate-y-3">
+        <div class="w-16 h-16 bg-gradient-to-br from-metal-blue to-blue-400 rounded-xl 
+                    flex items-center justify-center mb-6 group-hover:scale-110 transition">
+          <i class="fas fa-palette text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Diseño de Publicaciones</h3>
+        <p class="text-gray-300 mb-4">
+          Gráficos profesionales que destacan tu marca y conectan con tu audiencia.
+        </p>
+        <span class="text-metal-blue text-sm font-semibold">Incluido en paquetes</span>
+      </div>
+
+      <!-- Card -->
+      <div class="group bg-gray-800/80 backdrop-blur rounded-2xl p-8 border border-gray-700 
+                  hover:border-metal-blue transition duration-300 transform hover:-translate-y-3">
+        <div class="w-16 h-16 bg-gradient-to-br from-metal-blue to-blue-400 rounded-xl 
+                    flex items-center justify-center mb-6 group-hover:scale-110 transition">
+          <i class="fas fa-images text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Carruseles & Stories</h3>
+        <p class="text-gray-300 mb-4">
+          Secuencias visuales diseñadas para retención, interacción y storytelling.
+        </p>
+        <span class="text-metal-blue text-sm font-semibold">Ideal para engagement</span>
+      </div>
+
+      <!-- Card -->
+      <div class="group bg-gray-800/80 backdrop-blur rounded-2xl p-8 border border-gray-700 
+                  hover:border-metal-blue transition duration-300 transform hover:-translate-y-3">
+        <div class="w-16 h-16 bg-gradient-to-br from-metal-blue to-blue-400 rounded-xl 
+                    flex items-center justify-center mb-6 group-hover:scale-110 transition">
+          <i class="fas fa-film text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Reels & Video</h3>
+        <p class="text-gray-300 mb-4">
+          Contenido corto optimizado para algoritmo, ritmo y conversión.
+        </p>
+        <span class="text-metal-blue text-sm font-semibold">Alto alcance orgánico</span>
+      </div>
+
+      <!-- Card -->
+      <div class="group bg-gray-800/80 backdrop-blur rounded-2xl p-8 border border-gray-700 
+                  hover:border-metal-blue transition duration-300 transform hover:-translate-y-3">
+        <div class="w-16 h-16 bg-gradient-to-br from-metal-blue to-blue-400 rounded-xl 
+                    flex items-center justify-center mb-6 group-hover:scale-110 transition">
+          <i class="fas fa-search text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Auditoría de Perfiles</h3>
+        <p class="text-gray-300 mb-4">
+          Diagnóstico estratégico de tu perfil con mejoras claras y accionables.
+        </p>
+        <span class="text-metal-blue text-sm font-semibold">Punto de partida</span>
+      </div>
+
+      <!-- Card -->
+      <div class="group bg-gray-800/80 backdrop-blur rounded-2xl p-8 border border-gray-700 
+                  hover:border-metal-blue transition duration-300 transform hover:-translate-y-3">
+        <div class="w-16 h-16 bg-gradient-to-br from-metal-blue to-blue-400 rounded-xl 
+                    flex items-center justify-center mb-6 group-hover:scale-110 transition">
+          <i class="fas fa-chess-queen text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Identidad de Marca</h3>
+        <p class="text-gray-300 mb-4">
+          Visuales coherentes que transmiten personalidad y profesionalismo.
+        </p>
+        <span class="text-metal-blue text-sm font-semibold">Branding sólido</span>
+      </div>
+
+      <!-- Card -->
+      <div class="group bg-gray-800/80 backdrop-blur rounded-2xl p-8 border border-gray-700 
+                  hover:border-metal-blue transition duration-300 transform hover:-translate-y-3">
+        <div class="w-16 h-16 bg-gradient-to-br from-metal-blue to-blue-400 rounded-xl 
+                    flex items-center justify-center mb-6 group-hover:scale-110 transition">
+          <i class="fas fa-chart-line text-white text-2xl"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-3">Gestión de Redes</h3>
+        <p class="text-gray-300 mb-4">
+          Planeación, publicación y crecimiento con visión estratégica.
+        </p>
+        <span class="text-metal-blue text-sm font-semibold">Servicio completo</span>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-20">
+      <a href="servicios.html"
+         class="inline-block px-10 py-4 rounded-full font-bold text-lg
+                bg-gradient-to-r from-metal-blue to-blue-400
+                hover:scale-105 transition-transform shadow-lg">
+        Ver Paquetes y Precios
+      </a>
+    </div>
+
+  </div>
 </section>
 
 
@@ -772,6 +728,7 @@
 
 </body>
 </html>
+
 
 
 

@@ -4,38 +4,143 @@
 <meta charset="UTF-8">
 <title>Servicios - RC Studio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-body { background:#111; color:#fff; font-family:Arial; padding:20px; }
-.card {
-    background:#222; padding:20px; border-radius:10px;
-    margin-bottom:20px; max-width:600px;
-}
-button {
-    background:#e91e63; border:none; padding:10px;
-    border-radius:6px; color:white; cursor:pointer;
-}
+    body { 
+        background:#0a0a0a; 
+        color:#fff; 
+        font-family:Arial, Helvetica, sans-serif; 
+        margin:0;
+        padding:20px;
+    }
+
+    /* Header */
+    header {
+        background:#000;
+        padding:15px 20px;
+        border-bottom:1px solid #333;
+        position:sticky;
+        top:0;
+        z-index:10;
+    }
+
+    header a {
+        color:#fff;
+        text-decoration:none;
+        font-size:20px;
+        font-weight:bold;
+    }
+
+    h1 {
+        margin-top:40px;
+        text-align:center;
+        font-size:32px;
+        color:#e91e63;
+    }
+
+    .card {
+        background:#1b1b1b;
+        padding:25px;
+        border-radius:12px;
+        margin:25px auto;
+        max-width:600px;
+        border:1px solid #333;
+        box-shadow:0 0 15px rgba(255,255,255,0.05);
+    }
+
+    .card h2 {
+        color:#ff72b6;
+        margin-top:0;
+        font-size:26px;
+    }
+
+    .card p {
+        line-height:1.6;
+        color:#ddd;
+        font-size:16px;
+    }
+
+    button {
+        background:#e91e63;
+        border:none;
+        padding:12px 20px;
+        border-radius:6px;
+        color:white;
+        cursor:pointer;
+        font-size:16px;
+        margin-top:10px;
+        transition:0.2s;
+    }
+
+    button:hover {
+        background:#ff2e7e;
+        transform:scale(1.03);
+    }
+
+    .back-btn {
+        display:inline-block;
+        margin:20px auto;
+        background:#444;
+        padding:10px 18px;
+        border-radius:6px;
+        color:white;
+        text-decoration:none;
+        font-size:15px;
+        transition:0.2s;
+    }
+
+    .back-btn:hover {
+        background:#666;
+    }
 </style>
 </head>
+
 <body>
+
+<header>
+    <a href="/index.html">← Volver a Inicio</a>
+</header>
 
 <h1>Paquetes de Social Media + Diseño</h1>
 
 <div class="card">
-<h2>Paquete Básico</h2>
-<p>8 posts mensuales<br>2 diseños especiales<br>Programación</p>
-<a href="contratar.html?servicio=Basico"><button>Contratar</button></a>
+    <h2>Paquete Básico</h2>
+    <p>
+        • 8 posts mensuales<br>
+        • 2 diseños especiales<br>
+        • Programación de contenido<br>
+        • Asesoría de estilo visual
+    </p>
+    <a href="contratar.html?servicio=Basico">
+        <button>Contratar</button>
+    </a>
 </div>
 
 <div class="card">
-<h2>Paquete Intermedio</h2>
-<p>12 posts mensuales<br>4 diseños especiales<br>4 reels</p>
-<a href="contratar.html?servicio=Intermedio"><button>Contratar</button></a>
+    <h2>Paquete Intermedio</h2>
+    <p>
+        • 12 posts mensuales<br>
+        • 4 diseños especiales<br>
+        • 4 reels optimizados<br>
+        • Revisión mensual de métricas
+    </p>
+    <a href="contratar.html?servicio=Intermedio">
+        <button>Contratar</button>
+    </a>
 </div>
 
 <div class="card">
-<h2>Paquete Premium</h2>
-<p>20 posts mensuales<br>8 diseños<br>8 reels<br>Gestión completa</p>
-<a href="contratar.html?servicio=Premium"><button>Contratar</button></a>
+    <h2>Paquete Premium</h2>
+    <p>
+        • 20 posts mensuales<br>
+        • 8 diseños especiales<br>
+        • 8 reels con música IA<br>
+        • Gestión completa de redes<br>
+        • Estrategia y branding mensual
+    </p>
+    <a href="contratar.html?servicio=Premium">
+        <button>Contratar</button>
+    </a>
 </div>
 
 </body>

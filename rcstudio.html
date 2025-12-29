@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Studio – Branding & Contenido Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .reel {
+            position: relative;
+            width: 100%;
+            padding-top: 177.78%;
+            overflow: hidden;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .reel iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+
+<body class="bg-black text-white">
+
+<header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/" class="flex items-center gap-3">
+            <img src="/logo-rcstudio.png" class="h-10 opacity-80 hover:opacity-100 transition">
+            <span class="text-xl font-bold tracking-wide">RC Studio</span>
+        </a>
+
+        <nav class="hidden md:flex gap-8 text-gray-300">
+            <a href="/" class="hover:text-white">Inicio</a>
+            <a href="/servicios.html" class="hover:text-white">Servicios</a>
+            <a href="/#portafolio" class="hover:text-white">Portafolio</a>
+            <a href="/contratar.html" class="hover:text-white">Contratar</a>
+        </nav>
+    </div>
+</header>
+
+<div class="h-20"></div>
+
+<!-- HERO -->
+<section class="max-w-6xl mx-auto px-6 py-20 text-center">
+    <h1 class="text-5xl font-extrabold mb-6 text-blue-400">
+        RC Studio
+    </h1>
+
+    <p class="text-gray-300 text-lg max-w-3xl mx-auto">
+        Estudio creativo enfocado en branding, diseño visual y contenido digital
+        para marcas que quieren verse profesionales y destacar en redes sociales.
+    </p>
+
+    <div class="mt-12 flex justify-center">
+        <img src="/logo-rcstudio.png"
+             class="w-64 rounded-2xl shadow-xl border border-white/10">
+    </div>
+</section>
+
+<!-- SOBRE RC STUDIO -->
+<section class="max-w-5xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-4 text-blue-300">Sobre RC Studio</h2>
+
+    <p class="text-gray-300 leading-relaxed">
+        RC Studio nace como un espacio creativo independiente dedicado a construir
+        identidades visuales sólidas y contenido digital estratégico. Trabajamos con
+        emprendedores, artistas y negocios que buscan una presencia coherente,
+        estética y funcional en plataformas digitales.
+    </p>
+</section>
+
+<!-- QUÉ HACE EL ESTUDIO -->
+<section class="max-w-5xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold mb-8 text-blue-300">Qué hacemos</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <ul class="space-y-3 text-gray-300">
+                <li>• Diseño de identidad visual</li>
+                <li>• Logotipos y branding</li>
+                <li>• Diseño gráfico para redes</li>
+                <li>• Edición y optimización de imágenes</li>
+            </ul>
+        </div>
+
+        <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <ul class="space-y-3 text-gray-300">
+                <li>• Producción de reels</li>
+                <li>• Música original con IA</li>
+                <li>• Dirección creativa</li>
+                <li>• Estrategia de contenido digital</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">
+        Muestras de trabajo
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <img src="/imgs/Caballo.jpg" class="rounded-2xl border border-white/10 object-cover h-80 w-full">
+        <img src="/imgs/bruce.JPG" class="rounded-2xl border border-white/10 object-cover h-80 w-full">
+        <img src="/imgs/llave.jpg" class="rounded-2xl border border-white/10 object-cover h-80 w-full">
+    </div>
+</section>
+
+<!-- REELS -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">
+        Reels & Contenido Audiovisual
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-10">
+        <div class="reel">
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F31890295023947653%2F&show_text=false"></iframe>
+        </div>
+        <div class="reel">
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1840662069858512%2F&show_text=false"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 text-center">
+    <a href="https://wa.me/50670853001?text=Hola,%20quiero%20cotizar%20un%20proyecto%20con%20RC%20Studio"
+       target="_blank"
+       class="inline-flex items-center px-10 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
+        💬 Hablemos de tu proyecto
+    </a>
+</section>
+
+</body>
+</html>

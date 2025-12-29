@@ -9,11 +9,18 @@
 
 <body class="bg-black text-white font-sans">
 
-    <!-- Contenedor principal -->
+    <!-- ░░ HEADER SIMPLE (coherente con Servicios) ░░ -->
+    <header class="bg-[#000] border-b border-neutral-800 py-4 px-6 sticky top-0 z-50">
+        <a href="/index.html" class="text-white text-lg font-semibold hover:text-pink-500 transition">
+            ← Volver al Inicio
+        </a>
+    </header>
+
+    <!-- ░░ CONTENEDOR PRINCIPAL ░░ -->
     <div class="max-w-3xl mx-auto px-6 py-12">
 
         <!-- Título -->
-        <h1 class="text-4xl font-bold text-center mb-10 text-white">
+        <h1 class="text-4xl font-bold text-center mb-10 text-pink-500">
             Contratar Servicios – RC Studio
         </h1>
 
@@ -27,7 +34,8 @@
                     <label class="block mb-2 font-semibold">Nombre completo</label>
                     <input
                         type="text" id="nombre"
-                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-pink-600"
+                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700
+                               focus:ring-2 focus:ring-pink-600"
                         required>
                 </div>
 
@@ -36,7 +44,8 @@
                     <label class="block mb-2 font-semibold">Correo electrónico</label>
                     <input
                         type="email" id="correo"
-                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-pink-600"
+                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700
+                               focus:ring-2 focus:ring-pink-600"
                         required>
                 </div>
 
@@ -44,7 +53,8 @@
                 <div>
                     <label class="block mb-2 font-semibold">Tipo de servicio</label>
                     <select id="servicio"
-                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 focus:ring-2 focus:ring-pink-600"
+                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700
+                               focus:ring-2 focus:ring-pink-600"
                         required>
                         <option value="">Seleccione una opción</option>
                         <option>Paquete Básico</option>
@@ -58,7 +68,8 @@
                 <div>
                     <label class="block mb-2 font-semibold">Descripción del proyecto</label>
                     <textarea id="descripcion"
-                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 h-32 focus:ring-2 focus:ring-pink-600"
+                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 h-32
+                               focus:ring-2 focus:ring-pink-600"
                         placeholder="Contame qué ocupás"
                         required></textarea>
                 </div>
@@ -86,6 +97,15 @@
             </form>
 
         </div>
+
+        <!-- Botón de volver abajo también -->
+        <div class="text-center mt-10">
+            <a href="/index.html"
+               class="text-neutral-400 hover:text-white transition underline">
+                ← Volver al Inicio
+            </a>
+        </div>
+
     </div>
 
 

@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkmate art – RC Studio</title>
+    <title>Checkmate Art – RC Studio</title>
+
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        /* ———————————————— ESTILO UNIVERSAL DE REELS ———————————————— */
+        /* ————— CONTENEDOR UNIVERSAL DE REELS (IG + FB) ————— */
         .reel {
             position: relative;
             width: 100%;
-            padding-top: 177.78%; /* Mantiene aspecto 9:16 */
+            padding-top: 177.78%; /* 9:16 */
             overflow: hidden;
             border-radius: 20px;
-            background: rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.06);
             border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,.4);
         }
 
         .reel iframe {
@@ -30,20 +32,19 @@
 
 <body class="bg-black text-white">
 
-<!-- ░░ HEADER EXACTO DEL INDEX ░░ -->
-<header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-white/10">
+<!-- ░░ HEADER ░░ -->
+<header class="fixed w-full z-50 bg-black/90 backdrop-blur border-b border-white/10">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-
         <a href="/" class="flex items-center gap-3">
             <img src="/logo-rcstudio.png" class="h-10 opacity-80 hover:opacity-100 transition">
             <span class="text-xl font-bold tracking-wide">RC Studio</span>
         </a>
 
         <nav class="hidden md:flex gap-8 text-gray-300">
-            <a href="/" class="hover:text-white transition">Inicio</a>
-            <a href="/servicios.html" class="hover:text-white transition">Servicios</a>
-            <a href="/portafolio" class="hover:text-white transition">Portafolio</a>
-            <a href="/contratar.html" class="hover:text-white transition">Contratar</a>
+            <a href="/" class="hover:text-white">Inicio</a>
+            <a href="/servicios.html" class="hover:text-white">Servicios</a>
+            <a href="/portafolio" class="hover:text-white">Portafolio</a>
+            <a href="/contratar.html" class="hover:text-white">Contratar</a>
         </nav>
     </div>
 </header>
@@ -52,49 +53,46 @@
 
 <!-- ░░ HERO ░░ -->
 <section class="max-w-6xl mx-auto px-6 py-20 text-center">
-    <h2 class="text-5xl font-extrabold mb-4 text-blue-400">Checkmate art</h2>
-
+    <h1 class="text-5xl font-extrabold mb-4 text-blue-400">Checkmate Art</h1>
     <p class="text-gray-300 text-lg max-w-2xl mx-auto">
-        Branding, contenido digital, edición fotográfica y creación de reels con música original hecha con IA.
+        Branding, contenido digital, edición fotográfica y reels con música original generada con IA.
     </p>
 
     <div class="mt-10 flex justify-center">
         <img src="/imgs/chekmate_logo.png"
-             alt="Logo Checkmate Art"
-             class="w-64 md:w-72 rounded-2xl shadow-xl border border-white/10">
+             class="w-64 rounded-2xl shadow-xl border border-white/10">
     </div>
 </section>
 
-<!-- ░░ SOBRE EL PROYECTO ░░ -->
+<!-- ░░ SOBRE ░░ -->
 <section class="max-w-5xl mx-auto px-6 py-16">
-    <h3 class="text-3xl font-bold mb-4 text-blue-300">Sobre la Marca</h3>
-
+    <h2 class="text-3xl font-bold mb-4 text-blue-300">Sobre la Marca</h2>
     <p class="text-gray-300 leading-relaxed">
-        Checkmate art es un emprendimiento de un artista que realiza pinturas inspiradas en Jiujitsu, Ajedrez y mascotas, que buscaba una identidad digital,
-        fotografías optimizadas para redes y contenido atractivo para Facebook, Instagram y TikTok, para mostrar sus trabajos.
+        Checkmate Art es un proyecto artístico inspirado en jiujitsu, ajedrez y mascotas,
+        que necesitaba una identidad visual sólida y contenido atractivo para redes sociales.
     </p>
 </section>
 
 <!-- ░░ MI ROL ░░ -->
 <section class="max-w-5xl mx-auto px-6 py-16">
-    <h3 class="text-3xl font-bold mb-8 text-blue-300">Mi Rol en el Proyecto</h3>
+    <h2 class="text-3xl font-bold mb-8 text-blue-300">Mi Rol</h2>
 
     <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white/5 p-6 rounded-xl border border-white/10 shadow-xl">
-            <ul class="space-y-3 text-gray-300">
-                <li>• Diseño de logo principal</li>
-                <li>• Edición y limpieza fotográfica</li>
-                <li>• Creación de plantillas y marcos</li>
-                <li>• Marca de agua personalizada</li>
+        <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <ul class="space-y-2 text-gray-300">
+                <li>• Diseño de logo</li>
+                <li>• Edición fotográfica</li>
+                <li>• Marcos y plantillas</li>
+                <li>• Marca de agua</li>
             </ul>
         </div>
 
-        <div class="bg-white/5 p-6 rounded-xl border border-white/10 shadow-xl">
-            <ul class="space-y-3 text-gray-300">
+        <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <ul class="space-y-2 text-gray-300">
                 <li>• Producción de reels</li>
-                <li>• Música original generada con IA</li>
+                <li>• Música con IA</li>
                 <li>• Dirección creativa</li>
-                <li>• Estrategia de contenido</li>
+                <li>• Estrategia digital</li>
             </ul>
         </div>
     </div>
@@ -102,53 +100,43 @@
 
 <!-- ░░ GALERÍA ░░ -->
 <section class="max-w-6xl mx-auto px-6 py-20">
-    <h3 class="text-3xl font-bold mb-8 text-center text-blue-300">Galería</h3>
+    <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Galería</h2>
 
     <div class="grid md:grid-cols-3 gap-8">
-        <img src="/imgs/Caballo.jpg" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
-        <img src="/imgs/bruce.JPG" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
-        <img src="/imgs/llave.jpg" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
-        <img src="/imgs/molotov_banski.JPG" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
-        <img src="/imgs/sushi_mewonster.JPG" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
-        <img src="/imgs/wrist_lock.jpg" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
+        <img src="/imgs/Caballo.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+        <img src="/imgs/bruce.JPG" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+        <img src="/imgs/llave.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+        <img src="/imgs/molotov_banski.JPG" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+        <img src="/imgs/sushi_mewonster.JPG" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+        <img src="/imgs/wrist_lock.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
     </div>
 </section>
 
-<!-- ░░ REELS (100% IGUALES Y ALINEADOS) ░░ -->
+<!-- ░░ REELS ░░ -->
 <section class="max-w-6xl mx-auto px-6 py-20">
-    <h3 class="text-3xl font-bold mb-8 text-center text-blue-300">Reels</h3>
+    <h2 class="text-3xl font-bold mb-10 text-center text-blue-300">Reels</h2>
 
-    <div class="grid md:grid-cols-2 gap-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
 
-        <!-- Reel 1 -->
+        <!-- Facebook Reel -->
         <div class="reel">
-            <iframe 
-                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F31890295023947653%2F&show_text=false&width=269&t=0"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
+            <iframe src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/31890295023947653&show_text=false"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                    allowfullscreen></iframe>
         </div>
 
-        <!-- Reel 2 -->
+        <!-- Instagram Reel 1 -->
         <div class="reel">
-            <iframe 
-                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1840662069858512%2F&show_text=false&width=269&t=0"
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
+            <iframe src="https://www.instagram.com/reel/DOIP1OWDW3-/embed"
+                    allowfullscreen></iframe>
         </div>
 
-    </div>
-</section>
+        <!-- Instagram Reel 2 -->
+        <div class="reel">
+            <iframe src="https://www.instagram.com/reel/DPogUGvEZnf/embed"
+                    allowfullscreen></iframe>
+        </div>
 
-<!-- ░░ CTA ░░ -->
-<section class="py-20 text-center">
-    <a href="https://wa.me/50670853001?text=Hola,%20quiero%20cotizar%20un%20proyecto%20similar%20a%20Checkmate%20Art"
-       target="_blank"
-       class="inline-flex items-center px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full shadow-xl transition transform hover:scale-105">
-        💬 Cotizar un proyecto similar
-    </a>
-</section>
-
-</body>
-</html>
+        <!-- 👉 SOLO DUPLICÁS ESTE BLOQUE PARA MÁS REELS -->
+        <!--
+        <div class="re

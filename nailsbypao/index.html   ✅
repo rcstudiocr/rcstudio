@@ -87,9 +87,10 @@
     <h3 class="text-3xl font-bold mb-8 text-center">Galería</h3>
 
     <div class="grid md:grid-cols-3 gap-6">
-        <img src="/assets/nails/azules.jpg" class="rounded-xl shadow-lg border border-white/10">
-        <img src="/assets/nails/french.jpg" class="rounded-xl shadow-lg border border-white/10">
-        <img src="/assets/nails/fusion.jpg" class="rounded-xl shadow-lg border border-white/10">
+        <img src="/imgs/nails/azules.jpg" class="rounded-xl shadow-lg border border-white/10">
+        <img src="/imgs/nails/french.jpg" class="rounded-xl shadow-lg border border-white/10">
+        <img src="/imgs/nails/fusion.jpg" class="rounded-xl shadow-lg border border-white/10">
+
     </div>
 </section>
 

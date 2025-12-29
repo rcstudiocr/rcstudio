@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkmate art – RC Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* ———————————————— ESTILO UNIVERSAL DE REELS ———————————————— */
+        .reel {
+            position: relative;
+            width: 100%;
+            padding-top: 177.78%; /* Mantiene aspecto 9:16 */
+            overflow: hidden;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .reel iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 
 <body class="bg-black text-white">
@@ -88,50 +109,43 @@
         <img src="/imgs/bruce.JPG" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
         <img src="/imgs/llave.jpg" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
         <img src="/imgs/molotov_banski.JPG" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
-        <img src="/imgs/sushi_mewonster.JPG" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">      
-        <img src="/imgs/wrist_lock.jpg" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">    
+        <img src="/imgs/sushi_mewonster.JPG" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
+        <img src="/imgs/wrist_lock.jpg" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
     </div>
 </section>
 
-<!-- ░░ REELS (ARREGLADO PARA QUE NO SE CORTEN) ░░ -->
+<!-- ░░ REELS (100% IGUALES Y ALINEADOS) ░░ -->
 <section class="max-w-6xl mx-auto px-6 py-20">
     <h3 class="text-3xl font-bold mb-8 text-center text-blue-300">Reels</h3>
 
     <div class="grid md:grid-cols-2 gap-10">
 
         <!-- Reel 1 -->
-        <div class="reel-container">
-  <iframe 
-    src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F31890295023947653%2F&show_text=false&width=269&t=0" 
-    style="border:none;overflow:hidden;width:100%;aspect-ratio:9/16;" 
-    scrolling="no" 
-    frameborder="0" 
-    allowfullscreen="true" 
-    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-  </iframe>
-</div>
-
+        <div class="reel">
+            <iframe 
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F31890295023947653%2F&show_text=false&width=269&t=0"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
         </div>
 
         <!-- Reel 2 -->
-        <div class="video-container">
-  <iframe 
-    src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1840662069858512%2F&show_text=false&width=269&t=0"
-    frameborder="0"
-    scrolling="no"
-    allowfullscreen="true"
-    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-  </iframe>
-</div>
+        <div class="reel">
+            <iframe 
+                src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1840662069858512%2F&show_text=false&width=269&t=0"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
 
+    </div>
 </section>
-
 
 <!-- ░░ CTA ░░ -->
 <section class="py-20 text-center">
-    <a href="https://wa.me/50670853001?text=Hola,%20quiero%20cotizar%20un%20proyecto%20similar%20a%20Nails%20by%20Pao"
+    <a href="https://wa.me/50670853001?text=Hola,%20quiero%20cotizar%20un%20proyecto%20similar%20a%20Checkmate%20Art"
        target="_blank"
-       class="inline-flex items-center px-10 py-4 bg-pink-500 hover:bg-pink-600 text-white font-semibold rounded-full shadow-xl transition transform hover:scale-105">
+       class="inline-flex items-center px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full shadow-xl transition transform hover:scale-105">
         💬 Cotizar un proyecto similar
     </a>
 </section>

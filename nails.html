@@ -5,6 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nails by Pao – RC Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+.reel {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 9 / 16;
+    overflow: hidden;
+    border-radius: 16px;
+    background: black;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.reel iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+</style>
+
 </head>
 
 <body class="bg-black text-white">
@@ -136,57 +157,49 @@
         con la identidad original de la marca.
     </p>
 </section>
+    
+    <!-- Reels -->
 
+        <section class="max-w-6xl mx-auto px-6 py-20">
+    <h3 class="text-3xl font-bold mb-8 text-center text-pink-300">Reels</h3>
 
-        <!-- Reel 1 -->
-        <div class="relative w-full rounded-xl overflow-hidden shadow-xl border border-white/10"
-             style="padding-top: 177%; background:black">
+    <div class="grid md:grid-cols-2 gap-10">
+
+        <div class="reel">
             <iframe
                 src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1574320153540135/"
-                class="absolute top-0 left-0 w-full h-full"
-                style="border:none; overflow:hidden"
-                allowfullscreen
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen>
             </iframe>
         </div>
 
-        <!-- Reel 2 -->
-        <div class="relative w-full rounded-xl overflow-hidden shadow-xl border border-white/10"
-             style="padding-top: 177%; background:black">
+        <div class="reel">
             <iframe
                 src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1327364829015310/"
-                class="absolute top-0 left-0 w-full h-full"
-                style="border:none; overflow:hidden"
-                allowfullscreen
-                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen>
             </iframe>
         </div>
 
-    <!-- Reel 3 -->
-<div class="relative w-full rounded-xl overflow-hidden shadow-xl border border-white/10"
-     style="padding-top: 177%; background:black">
-    <iframe
-        src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1964958820927694/"
-        class="absolute top-0 left-0 w-full h-full"
-        style="border:none"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowfullscreen>
-    </iframe>
-</div>
+        <div class="reel">
+            <iframe
+                src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/1964958820927694/"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
 
-<!-- Reel 4 -->
-<div class="relative w-full rounded-xl overflow-hidden shadow-xl border border-white/10"
-     style="padding-top: 177%; background:black">
-    <iframe
-        src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/641949938951406/"
-        class="absolute top-0 left-0 w-full h-full"
-        style="border:none"
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-        allowfullscreen>
-    </iframe>
-</div>
+        <div class="reel">
+            <iframe
+                src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/641949938951406/"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
 
+    </div>
 </section>
+
 
 
 

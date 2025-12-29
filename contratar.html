@@ -1,143 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contratar Servicios | RC Studio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contratar Servicios | RC Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="bg-black text-white font-sans">
 
-    <!-- ░░ HEADER SIMPLE (coherente con Servicios) ░░ -->
-    <header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
-  <div class="container mx-auto px-6 py-4">
-    <div class="flex justify-between items-center">
+<!-- ░░ HEADER ░░ -->
+<header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
+  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
 
-      <!-- Logo + Marca -->
-      <div class="flex items-center">
-        <a href="index.html">
-          <img src="logo-rcstudio.png" alt="RC Studio Logo" class="h-10 mr-4">
-        </a>
-        <span class="text-white font-bold text-xl">RC Studio</span>
-      </div>
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center">
+      <img src="logo-rcstudio.png" alt="RC Studio Logo" class="h-10 mr-3">
+      <span class="font-bold text-xl">
+        RC <span class="text-blue-500">Studio</span>
+      </span>
+    </a>
 
-      <!-- Menú -->
-      <nav class="hidden md:flex space-x-6">
-        <a href="index.html" class="text-gray-300 hover:text-white">Inicio</a>
-        <a href="servicios.html" class="text-gray-300 hover:text-white">Servicios</a>
-        <a href="contacto.html" class="text-gray-300 hover:text-white">Contacto</a>
-      </nav>
-    </div>
+    <!-- Navegación -->
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html" class="text-gray-300 hover:text-white">Inicio</a>
+      <a href="servicios.html" class="text-gray-300 hover:text-white">Servicios</a>
+      <a href="contratar.html" class="text-white font-semibold">Contratar</a>
+    </nav>
+
   </div>
 </header>
 
+<!-- ░░ CONTENIDO ░░ -->
+<main class="pt-32 pb-16">
 
-    <!-- ░░ CONTENEDOR PRINCIPAL ░░ -->
-    <div class="max-w-3xl mx-auto px-6 py-12">
+  <div class="max-w-3xl mx-auto px-6">
 
-        <!-- Título -->
-        <h1 class="text-4xl font-bold text-center mb-10 text-pink-500">
-            Contratar Servicios – RC Studio
-        </h1>
+    <!-- Título -->
+    <h1 class="text-4xl font-bold text-center mb-10">
+      Contratar <span class="text-blue-500">Servicios</span>
+    </h1>
 
-        <!-- Tarjeta -->
-        <div class="bg-neutral-900 p-8 rounded-2xl shadow-lg border border-neutral-800">
+    <!-- Card -->
+    <div class="bg-neutral-900 p-8 rounded-2xl shadow-xl border border-neutral-800">
 
-            <form onsubmit="return enviarWhatsapp(event)" class="space-y-8">
+      <form onsubmit="return enviarWhatsapp(event)" class="space-y-6">
 
-                <!-- Nombre -->
-                <div>
-                    <label class="block mb-2 font-semibold">Nombre completo</label>
-                    <input
-                        type="text" id="nombre"
-                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700
-                               focus:ring-2 focus:ring-pink-600"
-                        required>
-                </div>
-
-                <!-- Correo -->
-                <div>
-                    <label class="block mb-2 font-semibold">Correo electrónico</label>
-                    <input
-                        type="email" id="correo"
-                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700
-                               focus:ring-2 focus:ring-pink-600"
-                        required>
-                </div>
-
-                <!-- Tipo de servicio -->
-                <div>
-                    <label class="block mb-2 font-semibold">Tipo de servicio</label>
-                    <select id="servicio"
-                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700
-                               focus:ring-2 focus:ring-pink-600"
-                        required>
-                        <option value="">Seleccione una opción</option>
-                        <option>Paquete Básico</option>
-                        <option>Paquete Intermedio</option>
-                        <option>Paquete Premium</option>
-                        <option>Otro</option>
-                    </select>
-                </div>
-
-                <!-- Descripción -->
-                <div>
-                    <label class="block mb-2 font-semibold">Descripción del proyecto</label>
-                    <textarea id="descripcion"
-                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 h-32
-                               focus:ring-2 focus:ring-pink-600"
-                        placeholder="Contame qué ocupás"
-                        required></textarea>
-                </div>
-
-                <!-- Archivos -->
-                <div>
-                    <label class="block mb-2 font-semibold">Subir archivos (logo, fotos, etc)</label>
-                    <input type="file" id="archivos" multiple
-                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700">
-                </div>
-
-                <!-- Comprobante -->
-                <div>
-                    <label class="block mb-2 font-semibold">Comprobante de pago</label>
-                    <input type="file" id="pago" accept="image/*,application/pdf"
-                        class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700">
-                </div>
-
-                <!-- Botón -->
-                <button type="submit"
-                    class="w-full bg-pink-600 hover:bg-pink-700 py-3 rounded-xl font-semibold text-white transition">
-                    Enviar a WhatsApp
-                </button>
-
-            </form>
-
+        <!-- Nombre -->
+        <div>
+          <label class="block mb-2 font-semibold text-gray-300">Nombre completo</label>
+          <input
+            type="text"
+            id="nombre"
+            required
+            class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700
+                   focus:ring-2 focus:ring-blue-500 focus:outline-none">
         </div>
 
+        <!-- Correo -->
+        <div>
+          <label class="block mb-2 font-semibold text-gray-300">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            required
+            class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700
+                   focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        </div>
 
+        <!-- Servicio -->
+        <div>
+          <label class="block mb-2 font-semibold text-gray-300">Tipo de servicio</label>
+          <select
+            id="servicio"
+            required
+            class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700
+                   focus:ring-2 focus:ring-blue-500 focus:outline-none">
+            <option value="">Seleccione una opción</option>
+            <option>Paquete Básico</option>
+            <option>Paquete Intermedio</option>
+            <option>Paquete Premium</option>
+            <option>Otro</option>
+          </select>
+        </div>
+
+        <!-- Descripción -->
+        <div>
+          <label class="block mb-2 font-semibold text-gray-300">Descripción del proyecto</label>
+          <textarea
+            id="descripcion"
+            required
+            placeholder="Contanos qué necesitás"
+            class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700 h-32
+                   focus:ring-2 focus:ring-blue-500 focus:outline-none"></textarea>
+        </div>
+
+        <!-- Archivos -->
+        <div>
+          <label class="block mb-2 font-semibold text-gray-300">
+            Subir archivos (logo, imágenes, referencias)
+          </label>
+          <input
+            type="file"
+            multiple
+            class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700">
+        </div>
+
+        <!-- Comprobante -->
+        <div>
+          <label class="block mb-2 font-semibold text-gray-300">Comprobante de pago</label>
+          <input
+            type="file"
+            accept="image/*,application/pdf"
+            class="w-full p-3 rounded-lg bg-neutral-800 border border-neutral-700">
+        </div>
+
+        <!-- Botón -->
+        <button
+          type="submit"
+          class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-xl
+                 font-semibold text-white transition transform hover:scale-[1.02]">
+          Enviar a WhatsApp
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+
+<!-- ░░ SCRIPT ░░ -->
 <script>
 function enviarWhatsapp(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    const nombre = document.getElementById("nombre").value;
-    const correo = document.getElementById("correo").value;
-    const servicio = document.getElementById("servicio").value;
-    const descripcion = document.getElementById("descripcion").value;
+  const nombre = document.getElementById("nombre").value;
+  const correo = document.getElementById("correo").value;
+  const servicio = document.getElementById("servicio").value;
+  const descripcion = document.getElementById("descripcion").value;
 
-    const texto = 
-`Solicitud de servicios desde RC Studio:
+  const texto = `
+Solicitud de servicios – RC Studio
 
-*Nombre:* ${nombre}
-*Correo:* ${correo}
-*Servicio requerido:* ${servicio}
-*Descripción:* ${descripcion}
+Nombre: ${nombre}
+Correo: ${correo}
+Servicio: ${servicio}
 
-*Adjuntos:* (Debés enviarlos manualmente después de este mensaje porque WhatsApp no permite enviar archivos desde formularios web).`;
+Descripción:
+${descripcion}
 
-    const url = `https://wa.me/50670853001?text=${encodeURIComponent(texto)}`;
+Adjuntos: Se enviarán manualmente después.
+`;
 
-    window.open(url, "_blank");
+  const url = `https://wa.me/50670853001?text=${encodeURIComponent(texto)}`;
+  window.open(url, "_blank");
 }
 </script>
 

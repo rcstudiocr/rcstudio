@@ -143,25 +143,22 @@
 </header>
 
 <!-- Mobile Menu -->
-<nav id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-95 px-6 py-4 space-y-4">
-  <a href="index.html" class="block text-white hover:text-blue-400">Inicio</a>
-  <a href="servicios.html" class="block text-white hover:text-blue-400">Servicios</a>
-  <a href="#portafolio" class="block text-white hover:text-blue-400">Portafolio</a>  
-  <a href="contratar.html" class="block text-white hover:text-blue-400">Contratar</a>
-  </nav>
+<nav id="mobile-menu"
+     class="fixed top-16 left-0 w-full h-[calc(100vh-4rem)]
+            md:hidden hidden
+            bg-black bg-opacity-95
+            px-6 py-8 space-y-6
+            z-[9999]">
 
-<!-- Mobile Menu Script -->
-<script>
-  const toggle = document.getElementById("menu-toggle");
-  const menu = document.getElementById("mobile-menu");
+  <a href="index.html" class="block text-white text-lg hover:text-blue-400">Inicio</a>
+  <a href="servicios.html" class="block text-white text-lg hover:text-blue-400">Servicios</a>
+  <a href="#portafolio" class="block text-white text-lg hover:text-blue-400">Portafolio</a>
+  <a href="contratar.html" class="block text-white text-lg hover:text-blue-400">Contratar</a>
 
-  toggle.addEventListener("click", () => {
-    menu.classList.toggle("hidden");
-  });
-</script>
+</nav>
 
 
-    <!-- Hero Section -->
+   <!-- Hero Section -->
     <section id="inicio" class="hero-image min-h-screen flex items-center pt-20">
         <div class="container mx-auto px-6 py-20">
             <div class="max-w-2xl">
@@ -661,11 +658,18 @@
     </button>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('menu-toggle').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+  document.getElementById('menu-toggle').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+
+      // Bloquear scroll cuando el menú está abierto
+      if (menu.classList.contains('hidden')) {
+          document.body.style.overflow = '';
+      } else {
+          document.body.style.overflow = 'hidden';
+      }
+  });
+</script>
 
         // Back to top button
         const backToTopButton = document.getElementById('back-to-top');
@@ -737,6 +741,7 @@
 
 </body>
 </html>
+
 
 
 

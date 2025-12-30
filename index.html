@@ -103,41 +103,45 @@
 </head>
 <body>
 
-    <!-- HEADER UNIFICADO RC STUDIO -->
-<header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
+    <header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
   <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
 
-      <!-- LOGO -->
-      <div class="flex items-center">
-        <a href="index.html">
-          <img src="imgs/Logo.png" alt="RC Studio Logo" class="h-12 w-auto mr-3">
+      <!-- Logo -->
+      <a href="/index.html" class="flex items-center space-x-3">
+        <img src="assets/logo.png" alt="RC Studio Logo" class="h-10 w-auto">
+        <span class="text-white text-xl font-semibold tracking-wide">RC Studio</span>
+      </a>
+
+      <!-- Botón menú móvil -->
+      <button id="menuBtn" class="lg:hidden text-white text-3xl focus:outline-none">
+        ☰
+      </button>
+
+      <!-- Navegación -->
+      <nav id="menu" class="hidden lg:flex flex-col lg:flex-row lg:items-center lg:space-x-8 text-white text-lg">
+        <a href="/index.html" class="hover:text-gray-300 py-2">Inicio</a>
+        <a href="/servicios.html" class="hover:text-gray-300 py-2">Servicios</a>
+        <a href="/portafolio.html" class="hover:text-gray-300 py-2">Portafolio</a>
+        <a href="/contratar.html" class="hover:text-gray-300 py-2">Contratar</a>
+
+        <a href="/contratar.html">
+          <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg font-bold">
+            Agenda una llamada gratuita
+          </button>
         </a>
-        <span class="text-white font-bold text-xl hidden md:block">
-          RC <span class="text-blue-500">Studio</span>
-        </span>
-      </div>
-
-      <!-- MENÚ DESKTOP -->
-      <nav class="hidden md:flex space-x-6 text-white">
-        <a href="index.html" class="hover:text-blue-400">Inicio</a>
-        <a href="servicios.html" class="hover:text-blue-400">Servicios</a>
-        <a href="index.html#portafolio" class="hover:text-blue-400">Portafolio</a>
-        <a href="contratar.html" class="hover:text-blue-400">Contratar</a>
       </nav>
-
-      <!-- MENÚ MÓVIL -->
-      <div class="md:hidden">
-        <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
-          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
 
     </div>
   </div>
+
+  <!-- Script menú móvil -->
+  <script>
+    document.getElementById("menuBtn").addEventListener("click", function () {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("hidden");
+    });
+  </script>
 </header>
 
 <nav id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-95 px-6 py-4 space-y-4 z-40 relative">
@@ -745,6 +749,7 @@
 
 </body>
 </html>
+
 
 
 

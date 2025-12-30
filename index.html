@@ -110,13 +110,15 @@
 
       <!-- LOGO -->
       <div class="flex items-center">
-        <img src="imgs/Logo.png" alt="RC Studio Logo" class="h-12 w-auto mr-3">
+        <a href="index.html">
+          <img src="imgs/Logo.png" alt="RC Studio Logo" class="h-12 w-auto mr-3">
+        </a>
         <span class="text-white font-bold text-xl hidden md:block">
           RC <span class="text-blue-500">Studio</span>
         </span>
       </div>
 
-      <!-- MENU DESKTOP -->
+      <!-- MENÚ DESKTOP -->
       <nav class="hidden md:flex space-x-6 text-white">
         <a href="index.html" class="hover:text-blue-400">Inicio</a>
         <a href="servicios.html" class="hover:text-blue-400">Servicios</a>
@@ -124,7 +126,7 @@
         <a href="contratar.html" class="hover:text-blue-400">Contratar</a>
       </nav>
 
-      <!-- BOTÓN MENÚ MÓVIL -->
+      <!-- MENÚ MÓVIL -->
       <div class="md:hidden">
         <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -138,18 +140,13 @@
   </div>
 </header>
 
-<!-- MENÚ MÓVIL -->
-<nav id="mobile-menu" 
-     class="md:hidden hidden bg-black bg-opacity-95 px-6 py-4 space-y-4 z-40 relative">
-
+<nav id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-95 px-6 py-4 space-y-4 z-40 relative">
   <a href="index.html" class="block text-white hover:text-blue-400">Inicio</a>
   <a href="servicios.html" class="block text-white hover:text-blue-400">Servicios</a>
   <a href="index.html#portafolio" class="block text-white hover:text-blue-400">Portafolio</a>
   <a href="contratar.html" class="block text-white hover:text-blue-400">Contratar</a>
-
 </nav>
 
-<!-- SCRIPT MENÚ MÓVIL -->
 <script>
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("mobile-menu");
@@ -158,7 +155,6 @@
     menu.classList.toggle("hidden");
   });
 </script>
-
 
     <!-- Hero Section -->
     <section id="inicio" class="hero-image min-h-screen flex items-center pt-20">
@@ -173,13 +169,17 @@
 </p>
 
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a href="https://wa.me/50670853001?text=Hola%20vengo%20desde%20tu%20sitio%20web%20y%20quiero%20información"
+                    <a href="https://api.whatsapp.com/send?phone=50670853001&text=Hola%20vengo%20desde%20tu%20sitio%20web%20y%20quiero%20información"
+   target="_blank" rel="noopener"
    class="bg-metal-blue hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
-    Agendá una llamada gratuita
+   Agendá una llamada
 </a>
-                    <a href="#servicios" class="border border-metal-blue text-metal-blue hover:bg-metal-blue hover:text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
-                        Nuestros servicios
-                    </a>
+
+<a href="index.html#servicios"
+   class="border border-metal-blue text-metal-blue hover:bg-metal-blue hover:text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
+   Nuestros servicios
+</a>
+
                 </div>
             </div>
         </div>
@@ -745,6 +745,7 @@
 
 </body>
 </html>
+
 
 
 

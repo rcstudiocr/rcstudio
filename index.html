@@ -5,92 +5,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RC Studio | Diseño & Contenido Digital</title>
 
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
   </style>
 </head>
 
 <body class="bg-black text-white">
 
 <!-- ░░ HEADER ░░ -->
-<header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur border-b border-white/10">
-  <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<header class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-white/10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
 
     <!-- LOGO -->
-    <a href="/" class="flex items-center">
-      <img src="imgs/Logo.png" class="h-12 mr-3" alt="RC Studio">
+    <a href="index.html" class="flex items-center">
+      <img src="imgs/Logo.png" class="h-12" alt="RC Studio">
     </a>
 
     <!-- MENU DESKTOP -->
-    <ul class="hidden md:flex gap-8 font-medium">
-      <li><a href="/" class="hover:text-blue-400">Inicio</a></li>
-      <li><a href="/servicios.html" class="hover:text-blue-400">Servicios</a></li>
-      <li><a href="/portafolio.html" class="hover:text-blue-400">Portafolio</a></li>
-      <li><a href="/contratar.html" class="hover:text-blue-400">Contratar</a></li>
-    </ul>
+    <nav class="hidden md:flex gap-8 font-medium">
+      <a href="index.html" class="hover:text-blue-400">Inicio</a>
+      <a href="servicios.html" class="hover:text-blue-400">Servicios</a>
+      <a href="portafolio.html" class="hover:text-blue-400">Portafolio</a>
+      <a href="contratar.html" class="hover:text-blue-400">Contratar</a>
+    </nav>
 
     <!-- BOTÓN MOBILE -->
-    <button id="menuBtn" class="md:hidden text-3xl">
+    <button id="menuBtn" class="md:hidden text-3xl z-50">
       ☰
     </button>
-  </nav>
 
-  <!-- MENU MOBILE -->
-  <div id="mobileMenu" class="hidden md:hidden bg-black border-t border-white/10">
-    <ul class="flex flex-col px-6 py-6 gap-6 text-lg">
-      <li><a href="/" class="block">Inicio</a></li>
-      <li><a href="/servicios.html" class="block">Servicios</a></li>
-      <li><a href="/portafolio.html" class="block">Portafolio</a></li>
-      <li><a href="/contratar.html" class="block">Contratar</a></li>
-    </ul>
+    <!-- MENU MOBILE -->
+    <div id="mobileMenu"
+         class="hidden absolute top-full left-0 w-full bg-black border-t border-white/10 md:hidden">
+      <nav class="flex flex-col px-6 py-6 gap-6 text-lg">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="portafolio.html">Portafolio</a>
+        <a href="contratar.html">Contratar</a>
+      </nav>
+    </div>
+
   </div>
 </header>
 
-<!-- ESPACIADOR HEADER -->
+<!-- ESPACIADOR -->
 <div class="h-24"></div>
 
 <!-- ░░ HERO ░░ -->
-<section class="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-16 items-center">
+<section class="max-w-6xl mx-auto px-6 py-24 text-center">
 
-  <div>
-    <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-6">
-      Diseño, contenido y estrategia<br>
-      <span class="text-blue-400">para marcas que quieren destacar</span>
-    </h1>
+  <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+    Diseño & contenido digital<br>
+    <span class="text-blue-400">para marcas con carácter</span>
+  </h1>
 
-    <p class="text-gray-400 mb-8 text-lg">
-      Branding, redes sociales, contenido visual y presencia digital
-      con personalidad y propósito.
-    </p>
+  <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
+    Branding, redes sociales, reels y estrategia digital
+    pensada para crecer.
+  </p>
 
-    <div class="flex gap-4 flex-wrap">
-      <a href="/servicios.html"
-         class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold">
-        Nuestros servicios
-      </a>
+  <div class="flex justify-center gap-4 flex-wrap">
+    <a href="servicios.html"
+       class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold">
+      Nuestros servicios
+    </a>
 
-      <a href="/contratar.html"
-         class="px-6 py-3 rounded-xl border border-white/30 hover:border-blue-400">
-        Agenda una llamada
-      </a>
-    </div>
-  </div>
-
-  <div class="flex justify-center">
-    <img src="imgs/hero.png"
-         alt="RC Studio"
-         class="rounded-2xl max-w-md opacity-90">
+    <a href="contratar.html"
+       class="px-6 py-3 rounded-xl border border-white/30 hover:border-blue-400">
+      Agenda una llamada
+    </a>
   </div>
 
 </section>
 
-<!-- ░░ SERVICIOS RESUMEN ░░ -->
-<section class="bg-zinc-900/50 py-20">
+<!-- ░░ SERVICIOS ░░ -->
+<section class="bg-zinc-900/60 py-20">
   <div class="max-w-6xl mx-auto px-6 text-center">
 
     <h2 class="text-3xl font-bold mb-12 text-blue-300">
@@ -99,49 +90,22 @@
 
     <div class="grid md:grid-cols-3 gap-10">
 
-      <div class="bg-black rounded-2xl p-8 border border-white/10">
+      <div class="bg-black p-8 rounded-2xl border border-white/10">
         <h3 class="text-xl font-bold mb-3">Branding</h3>
-        <p class="text-gray-400">
-          Logos, identidad visual y concepto de marca.
-        </p>
+        <p class="text-gray-400">Identidad visual y concepto de marca.</p>
       </div>
 
-      <div class="bg-black rounded-2xl p-8 border border-white/10">
+      <div class="bg-black p-8 rounded-2xl border border-white/10">
         <h3 class="text-xl font-bold mb-3">Contenido</h3>
-        <p class="text-gray-400">
-          Reels, posts, diseño gráfico y storytelling visual.
-        </p>
+        <p class="text-gray-400">Diseño gráfico y reels para redes.</p>
       </div>
 
-      <div class="bg-black rounded-2xl p-8 border border-white/10">
+      <div class="bg-black p-8 rounded-2xl border border-white/10">
         <h3 class="text-xl font-bold mb-3">Estrategia</h3>
-        <p class="text-gray-400">
-          Presencia digital coherente y orientada a resultados.
-        </p>
+        <p class="text-gray-400">Presencia digital clara y coherente.</p>
       </div>
 
     </div>
-
-  </div>
-</section>
-
-<!-- ░░ PORTAFOLIO CTA ░░ -->
-<section class="py-24">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-
-    <h2 class="text-3xl font-bold mb-6">
-      Proyectos reales, marcas reales
-    </h2>
-
-    <p class="text-gray-400 mb-10">
-      Conocé algunos de los trabajos que hemos desarrollado.
-    </p>
-
-    <a href="/portafolio.html"
-       class="inline-block px-8 py-4 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold">
-      Ver portafolio
-    </a>
-
   </div>
 </section>
 
@@ -152,13 +116,13 @@
   </div>
 </footer>
 
-<!-- ░░ SCRIPT MENU MOBILE ░░ -->
+<!-- SCRIPT MENU MOBILE -->
 <script>
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-  menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
   });
 </script>
 

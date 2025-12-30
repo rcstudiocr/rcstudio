@@ -3,139 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RC Studio | Diseño Visual & Branding Digital</title>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-    <!-- SEO -->
-    <meta name="description" content="RC Studio — Diseño visual, branding digital, contenido creativo y producción multimedia. Transformamos ideas en experiencias visuales memorables.">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#000000">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="RC Studio — Diseño Visual & Branding Digital">
-    <meta property="og:description" content="Transformamos ideas en experiencias visualmente potentes. Diseño, branding y estrategia digital.">
-    <meta property="og:image" content="https://rcstudio-eight.vercel.app/og-image.jpg">
-    <meta property="og:url" content="https://rcstudio-eight.vercel.app">
-    <meta property="og:type" content="website">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="RC Studio — Branding Digital">
-    <meta name="twitter:description" content="Diseño visual, branding y estrategia digital para marcas modernas.">
-    <meta name="twitter:image" content="https://rcstudio-eight.vercel.app/og-image.jpg">
-
-    <!-- Tailwind -->
+    <title>RC Studio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0a0a0a;
-            color: #f5f5f5;
-            scroll-behavior: smooth;
-        }
-        .bg-metal-blue { background-color: #1a3a5f; }
-        .text-metal-blue { color: #4a8fd4; }
-        .gradient-text {
-            background: linear-gradient(90deg, #4a8fd4, #3a7bc8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .hero-image {
-            background-image: 
-              linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-              url('/imgs/Banner_rcs.png');
-            background-size: cover;
-            background-position: center center;
-        }
-    </style>
-
 </head>
-<body>
 
-<!-- HEADER -->
-<header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
-  <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center">
-      <img src="imgs/Logo.png" alt="RC Studio Logo" class="h-12 w-auto mr-3">
-      <span class="text-white font-bold text-xl hidden md:block">
-        RC <span class="text-blue-500">Studio</span>
-      </span>
+<body class="bg-black text-white overflow-x-hidden">
+
+<!-- ░░ HEADER ░░ -->
+<header class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <a href="/index.html" class="flex items-center gap-3">
+            <img src="/logo-rcstudio.png" class="h-10 w-auto opacity-80 hover:opacity-100 transition">
+            <span class="text-xl font-bold tracking-wide">RC Studio</span>
+        </a>
+
+        <!-- Desktop menu -->
+        <nav class="hidden md:flex gap-8 text-gray-300">
+            <a href="/index.html" class="hover:text-white">Inicio</a>
+            <a href="/servicios.html" class="hover:text-white">Servicios</a>
+            <a href="/portafolio.html" class="hover:text-white">Portafolio</a>
+            <a href="/contratar.html" class="hover:text-white">Contratar</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
     </div>
 
-    <!-- Desktop Menu -->
-    <nav class="hidden md:flex space-x-6 text-white">
-      <a href="#inicio" class="hover:text-blue-400">Inicio</a>
-      <a href="#servicios" class="hover:text-blue-400">Servicios</a>
-      <a href="#portafolio" class="hover:text-blue-400">Portafolio</a>
-      <a href="contratar.html" class="hover:text-blue-400">Contratar</a>
+    <!-- Mobile menu -->
+    <nav id="mobileMenu" class="hidden md:hidden px-6 pb-6 pt-2 bg-black border-t border-white/10">
+        <a href="/index.html" class="block py-2 text-gray-300 hover:text-white">Inicio</a>
+        <a href="/servicios.html" class="block py-2 text-gray-300 hover:text-white">Servicios</a>
+        <a href="/portafolio.html" class="block py-2 text-gray-300 hover:text-white">Portafolio</a>
+        <a href="/contratar.html" class="block py-2 text-gray-300 hover:text-white">Contratar</a>
     </nav>
-
-    <!-- Mobile Toggle -->
-    <div class="md:hidden">
-      <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-  </div>
 </header>
 
-<!-- MOBILE MENU -->
-<nav id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-95 px-6 py-4 space-y-4">
-  <a href="#inicio" class="block text-white hover:text-blue-400">Inicio</a>
-  <a href="#servicios" class="block text-white hover:text-blue-400">Servicios</a>
-  <a href="#portafolio" class="block text-white hover:text-blue-400">Portafolio</a>
-  <a href="contratar.html" class="block text-white hover:text-blue-400">Contratar</a>
-</nav>
+<!-- Spacer header -->
+<div class="h-20"></div>
 
-<!-- HERO -->
-<section id="inicio" class="hero-image min-h-screen flex items-center pt-20">
-  <div class="container mx-auto px-6 py-20">
-    <div class="max-w-2xl">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-        Nos encargamos de tu <span class="gradient-text">presencia digital</span> para que vos te encargués de tu negocio
-      </h1>
-      <p class="text-lg md:text-xl text-gray-300 mb-10">
-        Diseño, contenido, redes y soporte técnico en un solo lugar. Sin enredos. Sin promesas vacías. Con criterio.
-      </p>
+<!-- ░░ HERO ░░ -->
+<section class="max-w-6xl mx-auto px-6 py-20 text-center">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+        Diseño, contenido y branding<br>
+        <span class="text-red-500">con identidad</span>
+    </h1>
 
-      <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-        <!-- FIXED BUTTONS -->
-        <a href="https://wa.me/50670853001?text=Hola%20vengo%20desde%20tu%20sitio%20web%20y%20quiero%20información"
-           class="bg-metal-blue hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
-          Agendá una llamada gratuita
+    <p class="text-gray-300 max-w-2xl mx-auto text-lg">
+        Ayudo a marcas y emprendedores a verse profesionales en redes sociales,
+        con diseño visual, reels y estrategia.
+    </p>
+
+    <div class="mt-10 flex flex-col md:flex-row gap-4 justify-center">
+        <a href="/servicios.html"
+           class="px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition">
+            Nuestros servicios
         </a>
 
-        <!-- SCROLL TO SERVICES -->
-        <a href="#servicios"
-           class="border border-metal-blue text-metal-blue hover:bg-metal-blue hover:text-white font-medium py-3 px-8 rounded-full transition duration-300 transform hover:scale-105">
-          Nuestros servicios
+        <a href="/contratar.html"
+           class="px-8 py-4 rounded-full border border-white/30 hover:border-white transition">
+            Agendá una llamada
         </a>
-      </div>
     </div>
-  </div>
 </section>
 
+<!-- ░░ PORTAFOLIO DESTACADO ░░ -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-10 text-center">Proyectos destacados</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+        <a href="/nails.html" class="group">
+            <div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10">
+                <img src="/imgs/logo.jpg" class="w-full h-60 object-cover">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold group-hover:text-pink-400 transition">
+                        Nails by Pao
+                    </h3>
+                    <p class="text-gray-400 text-sm mt-2">
+                        Branding · Reels · Redes
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/checkmate.html" class="group">
+            <div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10">
+                <img src="/imgs/chekmate_logo.png" class="w-full h-60 object-cover">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold group-hover:text-blue-400 transition">
+                        Checkmate Art
+                    </h3>
+                    <p class="text-gray-400 text-sm mt-2">
+                        Arte · Branding · Contenido
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="/diseno-unico.html" class="group">
+            <div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10">
+                <img src="/diseno_unico.png" class="w-full h-60 object-cover">
+                <div class="p-5">
+                    <h3 class="text-xl font-semibold group-hover:text-red-400 transition">
+                        Diseño Único CR
+                    </h3>
+                    <p class="text-gray-400 text-sm mt-2">
+                        Proyecto en desarrollo
+                    </p>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</section>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="border-t border-white/10 py-10 text-center text-gray-400 text-sm">
+    © 2025 RC Studio · Diseño y contenido con carácter
+</footer>
+
+<!-- ░░ SCRIPT MENÚ MÓVIL ░░ -->
 <script>
-  // MOBILE MENU TOGGLE
-  document.getElementById('menu-toggle').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  });
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
 </script>
 
 </body>

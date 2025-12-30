@@ -2,128 +2,113 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RC Studio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Config Tailwind mínima -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bgdark: '#0b0b0f'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="bg-black text-white overflow-x-hidden">
+<body class="bg-bgdark text-white overflow-x-hidden">
 
 <!-- ░░ HEADER ░░ -->
-<header class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<header class="relative min-h-screen flex flex-col">
 
-        <a href="/index.html" class="flex items-center gap-3">
-            <img src="/logo-rcstudio.png" class="h-10 w-auto opacity-80 hover:opacity-100 transition">
-            <span class="text-xl font-bold tracking-wide">RC Studio</span>
-        </a>
+    <!-- NAV -->
+    <nav class="flex items-center justify-between px-6 py-5 z-50">
+        <img src="/imgs/logo.png" alt="RC Studio" class="h-10">
 
         <!-- Desktop menu -->
-        <nav class="hidden md:flex gap-8 text-gray-300">
-            <a href="/index.html" class="hover:text-white">Inicio</a>
-            <a href="/servicios.html" class="hover:text-white">Servicios</a>
-            <a href="/portafolio.html" class="hover:text-white">Portafolio</a>
-            <a href="/contratar.html" class="hover:text-white">Contratar</a>
-        </nav>
+        <ul class="hidden md:flex gap-8 text-sm">
+            <li><a href="/index.html" class="hover:text-blue-400">Inicio</a></li>
+            <li><a href="/servicios.html" class="hover:text-blue-400">Servicios</a></li>
+            <li><a href="/portafolio.html" class="hover:text-blue-400">Portafolio</a></li>
+            <li><a href="/contratar.html" class="hover:text-blue-400">Contratar</a></li>
+        </ul>
 
-        <!-- Mobile menu button -->
-        <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
-    </div>
+        <!-- Mobile button -->
+        <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+    </nav>
 
     <!-- Mobile menu -->
-    <nav id="mobileMenu" class="hidden md:hidden px-6 pb-6 pt-2 bg-black border-t border-white/10">
-        <a href="/index.html" class="block py-2 text-gray-300 hover:text-white">Inicio</a>
-        <a href="/servicios.html" class="block py-2 text-gray-300 hover:text-white">Servicios</a>
-        <a href="/portafolio.html" class="block py-2 text-gray-300 hover:text-white">Portafolio</a>
-        <a href="/contratar.html" class="block py-2 text-gray-300 hover:text-white">Contratar</a>
-    </nav>
+    <div id="mobileMenu" class="hidden md:hidden bg-black/95 px-6 py-8 space-y-4 text-center">
+        <a href="/index.html" class="block">Inicio</a>
+        <a href="/servicios.html" class="block">Servicios</a>
+        <a href="/portafolio.html" class="block">Portafolio</a>
+        <a href="/contratar.html" class="block">Contratar</a>
+    </div>
+
+    <!-- HERO -->
+    <div class="flex-1 flex items-center justify-center text-center px-6">
+        <div class="max-w-2xl">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                Diseño. Branding. Contenido que conecta.
+            </h1>
+            <p class="text-white/70 mb-8">
+                Creamos identidad visual y presencia digital para marcas reales.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/servicios.html"
+                   class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 transition">
+                    Nuestros servicios
+                </a>
+                <a href="/contratar.html"
+                   class="px-6 py-3 rounded-xl border border-white/20 hover:bg-white/10 transition">
+                    Agenda una llamada
+                </a>
+            </div>
+        </div>
+    </div>
 </header>
 
-<!-- Spacer header -->
-<div class="h-20"></div>
-
-<!-- ░░ HERO ░░ -->
-<section class="max-w-6xl mx-auto px-6 py-20 text-center">
-    <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
-        Diseño, contenido y branding<br>
-        <span class="text-red-500">con identidad</span>
-    </h1>
-
-    <p class="text-gray-300 max-w-2xl mx-auto text-lg">
-        Ayudo a marcas y emprendedores a verse profesionales en redes sociales,
-        con diseño visual, reels y estrategia.
-    </p>
-
-    <div class="mt-10 flex flex-col md:flex-row gap-4 justify-center">
-        <a href="/servicios.html"
-           class="px-8 py-4 rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition">
-            Nuestros servicios
-        </a>
-
-        <a href="/contratar.html"
-           class="px-8 py-4 rounded-full border border-white/30 hover:border-white transition">
-            Agendá una llamada
-        </a>
-    </div>
-</section>
-
-<!-- ░░ PORTAFOLIO DESTACADO ░░ -->
+<!-- ░░ SECCIÓN SERVICIOS RESUMEN ░░ -->
 <section class="max-w-6xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold mb-10 text-center">Proyectos destacados</h2>
+    <h2 class="text-3xl font-bold mb-12 text-center text-blue-300">
+        Qué hacemos
+    </h2>
 
     <div class="grid md:grid-cols-3 gap-8">
-
-        <a href="/nails.html" class="group">
-            <div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10">
-                <img src="/imgs/logo.jpg" class="w-full h-60 object-cover">
-                <div class="p-5">
-                    <h3 class="text-xl font-semibold group-hover:text-pink-400 transition">
-                        Nails by Pao
-                    </h3>
-                    <p class="text-gray-400 text-sm mt-2">
-                        Branding · Reels · Redes
-                    </p>
-                </div>
-            </div>
-        </a>
-
-        <a href="/checkmate.html" class="group">
-            <div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10">
-                <img src="/imgs/chekmate_logo.png" class="w-full h-60 object-cover">
-                <div class="p-5">
-                    <h3 class="text-xl font-semibold group-hover:text-blue-400 transition">
-                        Checkmate Art
-                    </h3>
-                    <p class="text-gray-400 text-sm mt-2">
-                        Arte · Branding · Contenido
-                    </p>
-                </div>
-            </div>
-        </a>
-
-        <a href="/diseno-unico.html" class="group">
-            <div class="bg-white/5 rounded-2xl overflow-hidden border border-white/10">
-                <img src="/diseno_unico.png" class="w-full h-60 object-cover">
-                <div class="p-5">
-                    <h3 class="text-xl font-semibold group-hover:text-red-400 transition">
-                        Diseño Único CR
-                    </h3>
-                    <p class="text-gray-400 text-sm mt-2">
-                        Proyecto en desarrollo
-                    </p>
-                </div>
-            </div>
-        </a>
-
+        <div class="p-6 rounded-2xl border border-white/10">
+            <h3 class="font-bold mb-2">Branding</h3>
+            <p class="text-white/70 text-sm">
+                Identidad visual, logos y coherencia de marca.
+            </p>
+        </div>
+        <div class="p-6 rounded-2xl border border-white/10">
+            <h3 class="font-bold mb-2">Contenido</h3>
+            <p class="text-white/70 text-sm">
+                Reels, imágenes y estrategia para redes sociales.
+            </p>
+        </div>
+        <div class="p-6 rounded-2xl border border-white/10">
+            <h3 class="font-bold mb-2">Web básica</h3>
+            <p class="text-white/70 text-sm">
+                Landing pages limpias y funcionales.
+            </p>
+        </div>
     </div>
 </section>
 
 <!-- ░░ FOOTER ░░ -->
-<footer class="border-t border-white/10 py-10 text-center text-gray-400 text-sm">
-    © 2025 RC Studio · Diseño y contenido con carácter
+<footer class="border-t border-white/10 py-10 text-center text-sm text-white/50">
+    © RC Studio — Costa Rica
 </footer>
 
-<!-- ░░ SCRIPT MENÚ MÓVIL ░░ -->
+<!-- ░░ SCRIPT MENU ░░ -->
 <script>
     const btn = document.getElementById('menuBtn');
     const menu = document.getElementById('mobileMenu');

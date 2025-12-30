@@ -1,150 +1,154 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RC Studio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RC Studio – Diseño & Contenido Digital</title>
 
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Config Tailwind -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        bg: "#0a0a0a",
-                        accent: "#38bdf8"
-                    }
-                }
-            }
-        }
-    </script>
+    <style>
+        /* Mobile menu */
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: block; }
+    </style>
 </head>
 
-<body class="bg-bg text-white">
+<body class="bg-black text-white">
 
-<!-- ░░ NAVBAR ░░ -->
-<header class="fixed top-0 left-0 w-full z-50 bg-bg/80 backdrop-blur border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<!-- ░░ HEADER ░░ -->
+<header class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-white/10">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        <!-- Logo -->
-        <a href="#inicio" class="text-xl font-bold text-accent">RC Studio</a>
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="logo-rcstudio.png" class="h-10">
+            <span class="font-bold text-lg">RC Studio</span>
+        </a>
 
-        <!-- Menu Desktop -->
-        <nav class="hidden md:flex gap-8">
-            <a href="#inicio" class="hover:text-accent">Inicio</a>
-            <a href="#servicios" class="hover:text-accent">Servicios</a>
-            <a href="#galeria" class="hover:text-accent">Portafolio</a>
-            <a href="#contacto" class="hover:text-accent">Contratar</a>
+        <!-- Desktop menu -->
+        <nav class="hidden md:flex gap-8 text-gray-300">
+            <a href="index.html" class="hover:text-white">Inicio</a>
+            <a href="servicios.html" class="hover:text-white">Servicios</a>
+            <a href="rcstudio.html" class="hover:text-white">Portafolio</a>
+            <a href="contratar.html" class="hover:text-white">Contratar</a>
         </nav>
 
-        <!-- Botón Mobile -->
-        <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+        <!-- Mobile button -->
+        <button id="menu-btn" class="md:hidden text-2xl">☰</button>
     </div>
 
-    <!-- Menu Mobile -->
-    <div id="mobileMenu" class="hidden md:hidden bg-bg border-t border-white/10">
-        <nav class="flex flex-col p-6 gap-4">
-            <a href="#inicio" class="hover:text-accent">Inicio</a>
-            <a href="#servicios" class="hover:text-accent">Servicios</a>
-            <a href="#galeria" class="hover:text-accent">Portafolio</a>
-            <a href="#contacto" class="hover:text-accent">Contratar</a>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-black border-t border-white/10">
+        <nav class="flex flex-col px-6 py-4 gap-4 text-gray-300">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="rcstudio.html">Portafolio</a>
+            <a href="contratar.html">Contratar</a>
         </nav>
     </div>
 </header>
 
+<div class="h-20"></div>
+
 <!-- ░░ HERO ░░ -->
-<section id="inicio" class="min-h-screen flex items-center justify-center text-center px-6 pt-32">
-    <div class="max-w-3xl">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
-            Diseño & Arte Digital<br>
-            <span class="text-accent">RC Studio</span>
-        </h1>
+<section class="max-w-6xl mx-auto px-6 py-24 text-center">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6">
+        Diseño, branding<br>
+        y contenido digital
+    </h1>
 
-        <p class="text-white/70 mb-10">
-            Ilustración, branding y arte visual con identidad fuerte.
-        </p>
+    <p class="text-gray-300 max-w-2xl mx-auto text-lg mb-10">
+        Ayudo a marcas y emprendimientos a verse profesionales,
+        coherentes y atractivos en redes y web.
+    </p>
 
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contacto" class="px-8 py-4 rounded-xl bg-accent text-black font-semibold">
-                Agenda una llamada
-            </a>
-            <a href="#servicios" class="px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10">
-                Nuestros servicios
-            </a>
-        </div>
+    <div class="flex flex-col md:flex-row gap-6 justify-center">
+        <a href="contratar.html"
+           class="px-10 py-4 bg-blue-600 hover:bg-blue-700 rounded-full font-semibold transition">
+            Agenda una llamada
+        </a>
+
+        <a href="servicios.html"
+           class="px-10 py-4 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-black rounded-full font-semibold transition">
+            Nuestros servicios
+        </a>
     </div>
 </section>
 
-<!-- ░░ SERVICIOS ░░ -->
-<section id="servicios" class="max-w-6xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold mb-10 text-center text-accent">Servicios</h2>
+<!-- ░░ SERVICIOS RESUMEN ░░ -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-10 text-center text-blue-300">Servicios</h2>
 
     <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="font-bold mb-2">Ilustración</h3>
-            <p class="text-white/70">Arte digital personalizado.</p>
+
+        <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <h3 class="font-bold text-xl mb-3">Branding</h3>
+            <p class="text-gray-300 text-sm">
+                Logo, identidad visual y coherencia de marca.
+            </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="font-bold mb-2">Branding</h3>
-            <p class="text-white/70">Identidad visual fuerte y coherente.</p>
+        <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <h3 class="font-bold text-xl mb-3">Contenido Digital</h3>
+            <p class="text-gray-300 text-sm">
+                Reels, imágenes, edición y piezas para redes.
+            </p>
         </div>
 
-        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
-            <h3 class="font-bold mb-2">Diseño gráfico</h3>
-            <p class="text-white/70">Contenido visual para redes y marcas.</p>
+        <div class="bg-white/5 p-6 rounded-xl border border-white/10">
+            <h3 class="font-bold text-xl mb-3">Web Básica</h3>
+            <p class="text-gray-300 text-sm">
+                Páginas claras, limpias y funcionales.
+            </p>
         </div>
+
+    </div>
+
+    <div class="text-center mt-12">
+        <a href="servicios.html" class="text-blue-400 hover:underline">
+            Ver todos los servicios →
+        </a>
     </div>
 </section>
 
-<!-- ░░ GALERÍA ░░ -->
-<section id="galeria" class="max-w-6xl mx-auto px-6 py-20">
-    <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Galería</h2>
+<!-- ░░ PORTAFOLIO ░░ -->
+<section class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-10 text-center text-blue-300">Portafolio</h2>
 
-    <div class="grid md:grid-cols-3 gap-8">
-        <img src="/imgs/checkmate/Bob5.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
-        <img src="/imgs/checkmate/Caballo.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
-        <img src="/imgs/checkmate/Karim4.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
-        <img src="/imgs/checkmate/Tarjeta.jpeg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
-        <img src="/imgs/checkmate/Vegueta5.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
-        <img src="/imgs/checkmate/scar_face.png" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+    <div class="grid md:grid-cols-4 gap-8">
+
+        <a href="nails.html" class="block bg-white/5 rounded-xl p-6 border border-white/10 hover:border-blue-400 transition">
+            <img src="imgs/nailsbypao/logo.png" class="h-24 mx-auto mb-4 object-contain">
+            <p class="text-center font-semibold">Nails by Pao</p>
+        </a>
+
+        <a href="checkmate.html" class="block bg-white/5 rounded-xl p-6 border border-white/10 hover:border-blue-400 transition">
+            <img src="imgs/checkmate/logo.png" class="h-24 mx-auto mb-4 object-contain">
+            <p class="text-center font-semibold">Checkmate Art</p>
+        </a>
+
+        <a href="rcstudio.html" class="block bg-white/5 rounded-xl p-6 border border-white/10 hover:border-blue-400 transition">
+            <img src="logo-rcstudio.png" class="h-24 mx-auto mb-4 object-contain">
+            <p class="text-center font-semibold">RC Studio</p>
+        </a>
+
+        <a href="diseno-unico-cr.html" class="block bg-white/5 rounded-xl p-6 border border-white/10 hover:border-blue-400 transition">
+            <img src="imgs/diseno_unico.png" class="h-24 mx-auto mb-4 object-contain opacity-70">
+            <p class="text-center font-semibold">Diseño Único CR</p>
+        </a>
+
     </div>
-</section>
-
-<!-- ░░ CONTACTO ░░ -->
-<section id="contacto" class="max-w-4xl mx-auto px-6 py-20 text-center">
-    <h2 class="text-3xl font-bold mb-6 text-accent">Hablemos</h2>
-    <p class="text-white/70 mb-8">Agendá una llamada y vemos tu proyecto.</p>
-
-    <a href="https://calendly.com/" target="_blank"
-       class="inline-block px-10 py-4 rounded-xl bg-accent text-black font-semibold">
-        Agendar llamada
-    </a>
 </section>
 
 <!-- ░░ FOOTER ░░ -->
-<footer class="py-10 text-center text-white/50 border-t border-white/10">
-    © 2025 RC Studio
+<footer class="border-t border-white/10 py-10 text-center text-gray-500 text-sm">
+    © 2025 RC Studio – Diseño & Contenido Digital
 </footer>
 
-<!-- ░░ JS MENU MOBILE ░░ -->
 <script>
-    const btn = document.getElementById("menuBtn");
-    const menu = document.getElementById("mobileMenu");
-
-    btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-    });
-
-    // Cerrar menú al tocar un link
-    document.querySelectorAll("#mobileMenu a").forEach(link => {
-        link.addEventListener("click", () => {
-            menu.classList.add("hidden");
-        });
-    });
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.onclick = () => menu.classList.toggle('open');
 </script>
 
 </body>

@@ -46,8 +46,25 @@
             <a href="/#portafolio" class="hover:text-white transition">Portafolio</a>
             <a href="/contratar.html" class="hover:text-white transition">Contratar</a>
         </nav>
+
+        <!-- Botón menú móvil -->
+<button id="menuBtn" class="md:hidden text-white text-2xl">
+    ☰
+</button>
+
     </div>
 </header>
+
+<!-- Menú móvil -->
+<div id="mobileMenu" class="hidden md:hidden bg-black border-b border-white/10">
+    <nav class="flex flex-col px-6 py-4 space-y-4 text-gray-300">
+        <a href="/" class="hover:text-white">Inicio</a>
+        <a href="/servicios.html" class="hover:text-white">Servicios</a>
+        <a href="/#portafolio" class="hover:text-white">Portafolio</a>
+        <a href="/contratar.html" class="hover:text-white">Contratar</a>
+    </nav>
+</div>
+    
 
 <div class="h-20"></div>
 
@@ -212,6 +229,16 @@
         💬 Cotizar un proyecto similar
     </a>
 </section>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+</script>
+    
 
 </body>
 </html>

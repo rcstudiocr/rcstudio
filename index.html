@@ -1,129 +1,150 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RC Studio | Diseño & Contenido Digital</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RC Studio</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    html { scroll-behavior: smooth; }
-  </style>
+    <!-- Config Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: "#0a0a0a",
+                        accent: "#38bdf8"
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-bg text-white">
 
-<!-- ░░ HEADER ░░ -->
-<header class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
+<!-- ░░ NAVBAR ░░ -->
+<header class="fixed top-0 left-0 w-full z-50 bg-bg/80 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-    <!-- LOGO -->
-    <a href="index.html" class="flex items-center">
-      <img src="imgs/Logo.png" class="h-12" alt="RC Studio">
-    </a>
+        <!-- Logo -->
+        <a href="#inicio" class="text-xl font-bold text-accent">RC Studio</a>
 
-    <!-- MENU DESKTOP -->
-    <nav class="hidden md:flex gap-8 font-medium">
-      <a href="index.html" class="hover:text-blue-400">Inicio</a>
-      <a href="servicios.html" class="hover:text-blue-400">Servicios</a>
-      <a href="portafolio.html" class="hover:text-blue-400">Portafolio</a>
-      <a href="contratar.html" class="hover:text-blue-400">Contratar</a>
-    </nav>
+        <!-- Menu Desktop -->
+        <nav class="hidden md:flex gap-8">
+            <a href="#inicio" class="hover:text-accent">Inicio</a>
+            <a href="#servicios" class="hover:text-accent">Servicios</a>
+            <a href="#galeria" class="hover:text-accent">Portafolio</a>
+            <a href="#contacto" class="hover:text-accent">Contratar</a>
+        </nav>
 
-    <!-- BOTÓN MOBILE -->
-    <button id="menuBtn" class="md:hidden text-3xl z-50">
-      ☰
-    </button>
-
-    <!-- MENU MOBILE -->
-    <div id="mobileMenu"
-         class="hidden absolute top-full left-0 w-full bg-black border-t border-white/10 md:hidden">
-      <nav class="flex flex-col px-6 py-6 gap-6 text-lg">
-        <a href="index.html">Inicio</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="portafolio.html">Portafolio</a>
-        <a href="contratar.html">Contratar</a>
-      </nav>
+        <!-- Botón Mobile -->
+        <button id="menuBtn" class="md:hidden text-2xl">☰</button>
     </div>
 
-  </div>
+    <!-- Menu Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden bg-bg border-t border-white/10">
+        <nav class="flex flex-col p-6 gap-4">
+            <a href="#inicio" class="hover:text-accent">Inicio</a>
+            <a href="#servicios" class="hover:text-accent">Servicios</a>
+            <a href="#galeria" class="hover:text-accent">Portafolio</a>
+            <a href="#contacto" class="hover:text-accent">Contratar</a>
+        </nav>
+    </div>
 </header>
 
-<!-- ESPACIADOR -->
-<div class="h-24"></div>
-
 <!-- ░░ HERO ░░ -->
-<section class="max-w-6xl mx-auto px-6 py-24 text-center">
+<section id="inicio" class="min-h-screen flex items-center justify-center text-center px-6 pt-32">
+    <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-6">
+            Diseño & Arte Digital<br>
+            <span class="text-accent">RC Studio</span>
+        </h1>
 
-  <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
-    Diseño & contenido digital<br>
-    <span class="text-blue-400">para marcas con carácter</span>
-  </h1>
+        <p class="text-white/70 mb-10">
+            Ilustración, branding y arte visual con identidad fuerte.
+        </p>
 
-  <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
-    Branding, redes sociales, reels y estrategia digital
-    pensada para crecer.
-  </p>
-
-  <div class="flex justify-center gap-4 flex-wrap">
-    <a href="servicios.html"
-       class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 font-semibold">
-      Nuestros servicios
-    </a>
-
-    <a href="contratar.html"
-       class="px-6 py-3 rounded-xl border border-white/30 hover:border-blue-400">
-      Agenda una llamada
-    </a>
-  </div>
-
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contacto" class="px-8 py-4 rounded-xl bg-accent text-black font-semibold">
+                Agenda una llamada
+            </a>
+            <a href="#servicios" class="px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10">
+                Nuestros servicios
+            </a>
+        </div>
+    </div>
 </section>
 
 <!-- ░░ SERVICIOS ░░ -->
-<section class="bg-zinc-900/60 py-20">
-  <div class="max-w-6xl mx-auto px-6 text-center">
+<section id="servicios" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-10 text-center text-accent">Servicios</h2>
 
-    <h2 class="text-3xl font-bold mb-12 text-blue-300">
-      ¿Qué hacemos?
-    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="font-bold mb-2">Ilustración</h3>
+            <p class="text-white/70">Arte digital personalizado.</p>
+        </div>
 
-    <div class="grid md:grid-cols-3 gap-10">
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="font-bold mb-2">Branding</h3>
+            <p class="text-white/70">Identidad visual fuerte y coherente.</p>
+        </div>
 
-      <div class="bg-black p-8 rounded-2xl border border-white/10">
-        <h3 class="text-xl font-bold mb-3">Branding</h3>
-        <p class="text-gray-400">Identidad visual y concepto de marca.</p>
-      </div>
-
-      <div class="bg-black p-8 rounded-2xl border border-white/10">
-        <h3 class="text-xl font-bold mb-3">Contenido</h3>
-        <p class="text-gray-400">Diseño gráfico y reels para redes.</p>
-      </div>
-
-      <div class="bg-black p-8 rounded-2xl border border-white/10">
-        <h3 class="text-xl font-bold mb-3">Estrategia</h3>
-        <p class="text-gray-400">Presencia digital clara y coherente.</p>
-      </div>
-
+        <div class="p-6 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="font-bold mb-2">Diseño gráfico</h3>
+            <p class="text-white/70">Contenido visual para redes y marcas.</p>
+        </div>
     </div>
-  </div>
+</section>
+
+<!-- ░░ GALERÍA ░░ -->
+<section id="galeria" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-8 text-center text-blue-300">Galería</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+        <img src="/imgs/checkmate/Bob5.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+        <img src="/imgs/checkmate/Caballo.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+        <img src="/imgs/checkmate/Karim4.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+        <img src="/imgs/checkmate/Tarjeta.jpeg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+        <img src="/imgs/checkmate/Vegueta5.jpg" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+        <img src="/imgs/checkmate/scar_face.png" class="rounded-2xl object-cover h-80 w-full border border-white/10">
+    </div>
+</section>
+
+<!-- ░░ CONTACTO ░░ -->
+<section id="contacto" class="max-w-4xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-6 text-accent">Hablemos</h2>
+    <p class="text-white/70 mb-8">Agendá una llamada y vemos tu proyecto.</p>
+
+    <a href="https://calendly.com/" target="_blank"
+       class="inline-block px-10 py-4 rounded-xl bg-accent text-black font-semibold">
+        Agendar llamada
+    </a>
 </section>
 
 <!-- ░░ FOOTER ░░ -->
-<footer class="border-t border-white/10 py-10">
-  <div class="max-w-6xl mx-auto px-6 text-center text-gray-500 text-sm">
-    © 2025 RC Studio · Diseño & Contenido Digital
-  </div>
+<footer class="py-10 text-center text-white/50 border-t border-white/10">
+    © 2025 RC Studio
 </footer>
 
-<!-- SCRIPT MENU MOBILE -->
+<!-- ░░ JS MENU MOBILE ░░ -->
 <script>
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
+    const btn = document.getElementById("menuBtn");
+    const menu = document.getElementById("mobileMenu");
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-  });
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+
+    // Cerrar menú al tocar un link
+    document.querySelectorAll("#mobileMenu a").forEach(link => {
+        link.addEventListener("click", () => {
+            menu.classList.add("hidden");
+        });
+    });
 </script>
 
 </body>

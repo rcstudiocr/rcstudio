@@ -103,13 +103,12 @@
 </head>
 <body>
 
-    <!-- Header -->
-<!-- Header -->
+    <!-- HEADER UNIFICADO RC STUDIO -->
 <header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm">
   <div class="container mx-auto px-6 py-4">
     <div class="flex justify-between items-center">
 
-      <!-- Logo + Marca -->
+      <!-- LOGO -->
       <div class="flex items-center">
         <img src="imgs/Logo.png" alt="RC Studio Logo" class="h-12 w-auto mr-3">
         <span class="text-white font-bold text-xl hidden md:block">
@@ -117,15 +116,15 @@
         </span>
       </div>
 
-      <!-- Desktop Menu -->
+      <!-- MENU DESKTOP -->
       <nav class="hidden md:flex space-x-6 text-white">
         <a href="index.html" class="hover:text-blue-400">Inicio</a>
         <a href="servicios.html" class="hover:text-blue-400">Servicios</a>
-        <a href="#portafolio" class="hover:text-blue-400">Portafolio</a>
+        <a href="index.html#portafolio" class="hover:text-blue-400">Portafolio</a>
         <a href="contratar.html" class="hover:text-blue-400">Contratar</a>
-        </nav>
+      </nav>
 
-      <!-- Mobile menu button -->
+      <!-- BOTÓN MENÚ MÓVIL -->
       <div class="md:hidden">
         <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
           <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -139,15 +138,18 @@
   </div>
 </header>
 
-<!-- Mobile Menu -->
-<nav id="mobile-menu" class="md:hidden hidden bg-black bg-opacity-95 px-6 py-4 space-y-4">
+<!-- MENÚ MÓVIL -->
+<nav id="mobile-menu" 
+     class="md:hidden hidden bg-black bg-opacity-95 px-6 py-4 space-y-4 z-40 relative">
+
   <a href="index.html" class="block text-white hover:text-blue-400">Inicio</a>
   <a href="servicios.html" class="block text-white hover:text-blue-400">Servicios</a>
-  <a href="#portafolio" class="block text-white hover:text-blue-400">Portafolio</a>  
+  <a href="index.html#portafolio" class="block text-white hover:text-blue-400">Portafolio</a>
   <a href="contratar.html" class="block text-white hover:text-blue-400">Contratar</a>
-  </nav>
 
-<!-- Mobile Menu Script -->
+</nav>
+
+<!-- SCRIPT MENÚ MÓVIL -->
 <script>
   const toggle = document.getElementById("menu-toggle");
   const menu = document.getElementById("mobile-menu");
@@ -743,6 +745,7 @@
 
 </body>
 </html>
+
 
 
 

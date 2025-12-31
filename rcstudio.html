@@ -7,29 +7,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        .reel {
-            position: relative;
-            width: 100%;
-            padding-top: 177.78%;
-            overflow: hidden;
-            border-radius: 20px;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.1);
+.reel {
+    position: relative;
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 9 / 16;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 16px;
+    background: black;
+    border: 1px solid rgba(255,255,255,0.1);
         }
-        .reel iframe {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-    </style>
+.reel iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+</style>
+    
 </head>
 
 <body class="bg-black text-white">
 
-<header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<!-- HEADER -->
+<header class="fixed inset-x-0 w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-white/10">
+    <div class="w-full px-6 py-4 flex justify-between items-center">
+        
         <a href="/" class="flex items-center gap-3">
             <img src="imgs/Logo.png" class="h-10 opacity-80 hover:opacity-100 transition">
             <span class="text-xl font-bold tracking-wide">RC Studio</span>
@@ -41,8 +46,26 @@
             <a href="/#portafolio" class="hover:text-white">Portafolio</a>
             <a href="/contratar.html" class="hover:text-white">Contratar</a>
         </nav>
+
+        <!-- Botón menú móvil -->
+<button id="menuBtn" class="md:hidden text-white text-2xl">
+    ☰
+</button>
+        
     </div>
 </header>
+
+<!-- Menú móvil -->
+<div id="mobile-menu"
+     class="fixed top-16 left-0 w-full bg-black border-t border-white/10
+            hidden z-40">
+    <nav class="flex flex-col px-6 py-4 space-y-4 text-gray-300">
+        <a href="/" class="hover:text-white">Inicio</a>
+        <a href="/servicios.html" class="hover:text-white">Servicios</a>
+        <a href="/#portafolio" class="hover:text-white">Portafolio</a>
+        <a href="/contratar.html" class="hover:text-white">Contratar</a>
+    </nav>
+</div>
 
 <div class="h-20"></div>
 
@@ -107,12 +130,12 @@
     </h2>
 
     <div class="grid md:grid-cols-3 gap-8">
-        <img src="/imgs/nails/logo_halloween.png" class="rounded-2xl border border-white/10 object-cover h-80 w-full">
-        <img src="/imgs/checkmate/Tarjeta.jpeg" class="rounded-2xl border border-white/10 object-cover h-80 w-full">
-        <img src="/imgs/nails/french.jpg" class="rounded-2xl border border-white/10 object-cover h-80 w-full">
-        <img src="/imgs/chekmate_logo.png" class="rounded-2xl border border-white/10 object-cover h-80 w-full">
-        <img src="/imgs/logo.jpg" class="rounded-2xl border border-white/10 object-cover h-80 w-full">
-        <img src="/imgs/checkmate/Caballo.jpg" class="rounded-2xl border border-white/10 object-cover h-80 w-full">
+        <img src="/imgs/nails/logo_halloween.png" class="rounded-2xl shadow-lg border border-white/10 object-contain w-full max-h-56 mx-auto">
+        <img src="/imgs/checkmate/Tarjeta.jpeg" class="rounded-2xl shadow-lg border border-white/10 object-contain w-full max-h-56 mx-auto">
+        <img src="/imgs/nails/french.jpg" class="rounded-2xl shadow-lg border border-white/10 object-contain w-full max-h-56 mx-auto">
+        <img src="/imgs/chekmate_logo.png" class="rounded-2xl shadow-lg border border-white/10 object-contain w-full max-h-56 mx-auto">
+        <img src="/imgs/logo.jpg" class="rounded-2xl shadow-lg border border-white/10 object-contain w-full max-h-56 mx-auto">
+        <img src="/imgs/checkmate/Caballo.jpg" class="rounded-2xl shadow-lg border border-white/10 object-contain w-full max-h-56 mx-auto">
     </div>
 </section>
 
@@ -140,6 +163,15 @@
         💬 Hablemos de tu proyecto
     </a>
 </section>
+
+<script>
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+</script>
 
 </body>
 </html>

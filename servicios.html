@@ -18,48 +18,6 @@ body {
   color:#fff;
 }
 
-/* ===== HEADER ===== */
-header {
-  background:#000;
-  border-bottom:1px solid #222;
-  padding:14px 24px;
-}
-
-.header-inner {
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-}
-
-.logo {
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.logo img {
-  height:42px;
-  width:auto;
-}
-
-.logo span {
-  font-size:20px;
-  font-weight:bold;
-}
-
-nav a {
-  color:#ccc;
-  margin-left:20px;
-  text-decoration:none;
-  font-size:15px;
-}
-
-nav a:hover {
-  color:#fff;
-}
-
 /* ===== HERO ===== */
 .hero {
   text-align:center;
@@ -180,11 +138,11 @@ nav a:hover {
 
 <body>
 
-<!-- HEADER -->
+<!-- HEADER UNIFICADO -->
 <header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-white/10">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-        <!-- Logo + Marca -->
+        <!-- Logo -->
         <div class="flex items-center gap-3">
             <a href="index.html">
                 <img src="imgs/Logo.png" alt="RC Studio Logo" class="h-10 w-auto">
@@ -194,7 +152,7 @@ nav a:hover {
             </span>
         </div>
 
-        <!-- MENU DESKTOP -->
+        <!-- Menu Desktop -->
         <nav class="hidden md:flex space-x-6 text-gray-300 text-sm">
             <a href="index.html" class="hover:text-white">Inicio</a>
             <a href="servicios.html" class="hover:text-white">Servicios</a>
@@ -221,16 +179,15 @@ nav a:hover {
 </div>
 
 <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
+menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+});
 </script>
 
 <div class="h-20"></div>
-
 
 <!-- HERO -->
 <section class="hero">
@@ -251,7 +208,6 @@ nav a:hover {
       <li>2 diseños especiales</li>
       <li>Programación de contenido</li>
       <li>Asesoría visual</li>
-      <li></li>
     </ul>
     <a href="https://wa.me/50670853001?text=Hola%20RC%20Studio,%20me%20interesa%20el%20paquete%20Básico"
        target="_blank" rel="noopener">
@@ -266,7 +222,6 @@ nav a:hover {
       <li>4 diseños especiales</li>
       <li>4 reels optimizados</li>
       <li>Revisión mensual</li>
-      <li></li>
     </ul>
     <a href="https://wa.me/50670853001?text=Hola%20RC%20Studio,%20me%20interesa%20el%20paquete%20Intermedio"
        target="_blank" rel="noopener">
@@ -301,15 +256,5 @@ nav a:hover {
   </a>
 </div>
 
-<script>
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobile-menu');
-
-menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
-</script>
-
-  
 </body>
 </html>

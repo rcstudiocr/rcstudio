@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <title>Servicios | RC Studio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<script src="https://cdn.tailwindcss.com"></script>
 
 <style>
 :root {
@@ -133,6 +135,11 @@ body {
   background:var(--metal-blue);
   color:#000;
 }
+
+.no-check::before {
+    display: none !important;
+}
+
 </style>
 </head>
 
@@ -208,6 +215,7 @@ menuBtn.addEventListener("click", () => {
       <li>2 diseños especiales</li>
       <li>Programación de contenido</li>
       <li>Asesoría visual</li>
+      <li class="no-check"></li>
     </ul>
     <a href="https://wa.me/50670853001?text=Hola%20RC%20Studio,%20me%20interesa%20el%20paquete%20Básico"
        target="_blank" rel="noopener">
@@ -222,6 +230,7 @@ menuBtn.addEventListener("click", () => {
       <li>4 diseños especiales</li>
       <li>4 reels optimizados</li>
       <li>Revisión mensual</li>
+      <li class="no-check"></li>
     </ul>
     <a href="https://wa.me/50670853001?text=Hola%20RC%20Studio,%20me%20interesa%20el%20paquete%20Intermedio"
        target="_blank" rel="noopener">

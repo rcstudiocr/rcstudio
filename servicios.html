@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -182,43 +181,22 @@ nav a:hover {
 <body>
 
 <!-- HEADER -->
-<header class="fixed inset-x-0 w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-white/10">
-    <div class="w-full px-6 py-4 flex justify-between items-center">
-
-        <a href="/" class="flex items-center gap-3">
-            <img src="imgs/Logo.png" class="h-10 opacity-80 hover:opacity-100 transition">
-            <span class="text-xl font-bold tracking-wide">RC Studio</span>
-        </a>
-
-        <nav class="hidden md:flex gap-8 text-gray-300">
-            <a href="/" class="hover:text-white transition">Inicio</a>
-            <a href="/servicios.html" class="hover:text-white transition">Servicios</a>
-            <a href="/#portafolio" class="hover:text-white transition">Portafolio</a>
-            <a href="/contratar.html" class="hover:text-white transition">Contratar</a>
-        </nav>
-
-        <!-- Botón menú móvil -->
-<button id="menuBtn" class="md:hidden text-white text-2xl">
-    ☰
-</button>
-
+<header>
+  <div class="header-inner">
+    <div class="logo">
+      <a href="index.html">
+        <img src="imgs/Logo.png" alt="RC Studio Logo">
+      </a>
+      <span>RC Studio</span>
     </div>
-</header>
 
-<!-- Menú móvil -->
-<div id="mobile-menu"
-     class="fixed top-16 left-0 w-full bg-black border-t border-white/10
-            hidden z-40">
-    <nav class="flex flex-col px-6 py-4 space-y-4 text-gray-300">
-        <a href="/" class="hover:text-white">Inicio</a>
-        <a href="/servicios.html" class="hover:text-white">Servicios</a>
-        <a href="/#portafolio" class="hover:text-white">Portafolio</a>
-        <a href="/contratar.html" class="hover:text-white">Contratar</a>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="index.html#portafolio">Portafolio</a>
     </nav>
-</div>
-    
-
-<div class="h-20"></div>
+  </div>
+</header>
 
 <!-- HERO -->
 <section class="hero">
@@ -287,13 +265,5 @@ nav a:hover {
   </a>
 </div>
 
-<script>
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobile-menu');
-
-menuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
-</script>
 </body>
 </html>

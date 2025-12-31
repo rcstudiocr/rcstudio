@@ -10,12 +10,15 @@
 .reel {
     position: relative;
     width: 100%;
+    max-width: 240px;
     aspect-ratio: 9 / 16;
+    margin: 0 auto;
     overflow: hidden;
     border-radius: 16px;
     background: black;
     border: 1px solid rgba(255,255,255,0.1);
 }
+
 
 .reel iframe {
     position: absolute;
@@ -31,8 +34,8 @@
 <body class="bg-black text-white">
 
 <!-- ░░ HEADER EXACTO DEL INDEX ░░ -->
-<header class="fixed w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+<header class="fixed inset-x-0 w-full z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-white/10">
+    <div class="w-full px-6 py-4 flex justify-between items-center">
 
         <a href="/" class="flex items-center gap-3">
             <img src="imgs/Logo.png" class="h-10 opacity-80 hover:opacity-100 transition">
@@ -125,9 +128,9 @@
     <h3 class="text-3xl font-bold mb-8 text-center text-blue-300">Galería</h3>
 
     <div class="grid md:grid-cols-3 gap-8">
-        <img src="/imgs/nails/Azules.jpeg" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
-        <img src="/imgs/nails/french.jpg" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
-        <img src="/imgs/nails/fusion.jpg" class="rounded-2xl shadow-lg border border-white/10 object-cover w-full h-80">
+        <img src="/imgs/nails/Azules.jpeg" class="rounded-2xl shadow-lg border border-white/10 object-contain w-full max-h-56 mx-auto">
+        <img src="/imgs/nails/french.jpg" class="rounded-2xl shadow-lg border border-white/10 object-contain w-full max-h-56 mx-auto">
+        <img src="/imgs/nails/fusion.jpg" class="rounded-2xl shadow-lg border border-white/10 object-contain w-full max-h-56 mx-auto">
     </div>
 </section>
 
